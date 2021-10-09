@@ -1,0 +1,27 @@
+.authpage {
+  &__wrapper {
+    display: flex;
+    height: 100vh;
+  }
+
+  &__left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1C1A19;
+    width: 33%;
+
+    img {
+      width: 192px;
+      height: 228px;
+    }
+  }
+
+  &__right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background: url("../../assets/img/map-bg.png") no-repeat center / cover;
+  }
+}

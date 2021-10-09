@@ -1,13 +1,17 @@
 import React, { useState } from "react"
+import { useDispatch } from "react-redux"
+import { NavLink } from "react-router-dom"
 import burgerIcon from "../../assets/img/icons/burger.svg"
 import closeIcon from "../../assets/img/icons/close.svg"
 import logoutIcon from "../../assets/img/icons/logout.svg"
 import pinIcon from "../../assets/img/icons/pin.svg"
 import profileIcon from "../../assets/img/icons/profile.svg"
 import logo from "../../assets/img/logo.svg"
+import { logOut } from "../../store/auth"
 import styles from "./header.module.scss"
 
 const Header = () => {
+  const dispatch = useDispatch()
   const [isOpen, setIsOpen] = useState(false)
 
   const openMenu = () => {
@@ -16,6 +20,10 @@ const Header = () => {
 
   const closeMenu = () => {
     setIsOpen(false)
+  }
+
+  const logoutHandler = () => {
+    dispatch(logOut())
   }
 
   return (
@@ -29,14 +37,18 @@ const Header = () => {
       <nav className={`${styles.navbar} ${isOpen ? styles.navbar_open : ""}`}>
         <ul className={styles.list}>
           <li className={styles.item}>
-            <img src={pinIcon} alt=""/>
-            Карта
+            <NavLink activeClassName={styles.active} to="/" exact>
+              <img src={pinIcon} alt=""/>
+              Карта
+            </NavLink>
           </li>
           <li className={styles.item}>
-            <img src={profileIcon} alt=""/>
-            Профиль
+            <NavLink activeClassName={styles.active} to="/profile">
+              <img src={profileIcon} alt=""/>
+              Профиль
+            </NavLink>
           </li>
-          <li className={styles.item}>
+          <li className={styles.item} onClick={logoutHandler}>
             <img src={logoutIcon} alt=""/>
             Выйти
           </li>
