@@ -1,61 +1,247 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Auth page Index snapshot 1`] = `
+exports[`Auth page AuthPage snapshot 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
-      <form
-        action="#"
+      <div
+        class="authpage__wrapper"
       >
-        <label
-          for="email"
+        <div
+          class="authpage__left"
         >
-          Email
-        </label>
-        <input
-          id="email"
-          name="email"
-          type="email"
-        />
-        <label
-          for="password"
+          <img
+            alt="Loft Taxi"
+            src="logo-v.svg"
+          />
+        </div>
+        <div
+          class="authpage__right"
         >
-          Пароль
-        </label>
-        <input
-          id="password"
-          name="password"
-          type="password"
-        />
-      </form>
+          <div
+            class="card"
+          >
+            <form
+              aria-label="form"
+              class="form"
+            >
+              <h2
+                class="form__title"
+              >
+                Регистрация
+              </h2>
+              <div
+                class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+              >
+                <label
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
+                  data-shrink="false"
+                >
+                  Email*
+                </label>
+                <div
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-fullWidth MuiInput-fullWidth MuiInputBase-formControl MuiInput-formControl"
+                >
+                  <input
+                    aria-invalid="false"
+                    class="MuiInputBase-input MuiInput-input"
+                    name="email"
+                    type="email"
+                    value=""
+                  />
+                </div>
+              </div>
+              <div
+                class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+              >
+                <label
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
+                  data-shrink="false"
+                >
+                  Как вас зовут?*
+                </label>
+                <div
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-fullWidth MuiInput-fullWidth MuiInputBase-formControl MuiInput-formControl"
+                >
+                  <input
+                    aria-invalid="false"
+                    class="MuiInputBase-input MuiInput-input"
+                    name="username"
+                    type="text"
+                    value=""
+                  />
+                </div>
+              </div>
+              <div
+                class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+              >
+                <label
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
+                  data-shrink="false"
+                >
+                  Придумайте пароль*
+                </label>
+                <div
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-fullWidth MuiInput-fullWidth MuiInputBase-formControl MuiInput-formControl"
+                >
+                  <input
+                    aria-invalid="false"
+                    class="MuiInputBase-input MuiInput-input"
+                    name="password"
+                    type="password"
+                    value=""
+                  />
+                </div>
+              </div>
+              <button
+                class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-fullWidth"
+                tabindex="0"
+                type="button"
+              >
+                <span
+                  class="MuiButton-label"
+                >
+                  Зарегистрироваться
+                </span>
+                <span
+                  class="MuiTouchRipple-root"
+                />
+              </button>
+              <p
+                class="form__text"
+              >
+                Уже зарегестрированны?
+                <a
+                  href="/login"
+                >
+                   Войти
+                </a>
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
     </div>
   </body>,
   "container": <div>
-    <form
-      action="#"
+    <div
+      class="authpage__wrapper"
     >
-      <label
-        for="email"
+      <div
+        class="authpage__left"
       >
-        Email
-      </label>
-      <input
-        id="email"
-        name="email"
-        type="email"
-      />
-      <label
-        for="password"
+        <img
+          alt="Loft Taxi"
+          src="logo-v.svg"
+        />
+      </div>
+      <div
+        class="authpage__right"
       >
-        Пароль
-      </label>
-      <input
-        id="password"
-        name="password"
-        type="password"
-      />
-    </form>
+        <div
+          class="card"
+        >
+          <form
+            aria-label="form"
+            class="form"
+          >
+            <h2
+              class="form__title"
+            >
+              Регистрация
+            </h2>
+            <div
+              class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+            >
+              <label
+                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
+                data-shrink="false"
+              >
+                Email*
+              </label>
+              <div
+                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-fullWidth MuiInput-fullWidth MuiInputBase-formControl MuiInput-formControl"
+              >
+                <input
+                  aria-invalid="false"
+                  class="MuiInputBase-input MuiInput-input"
+                  name="email"
+                  type="email"
+                  value=""
+                />
+              </div>
+            </div>
+            <div
+              class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+            >
+              <label
+                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
+                data-shrink="false"
+              >
+                Как вас зовут?*
+              </label>
+              <div
+                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-fullWidth MuiInput-fullWidth MuiInputBase-formControl MuiInput-formControl"
+              >
+                <input
+                  aria-invalid="false"
+                  class="MuiInputBase-input MuiInput-input"
+                  name="username"
+                  type="text"
+                  value=""
+                />
+              </div>
+            </div>
+            <div
+              class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+            >
+              <label
+                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
+                data-shrink="false"
+              >
+                Придумайте пароль*
+              </label>
+              <div
+                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-fullWidth MuiInput-fullWidth MuiInputBase-formControl MuiInput-formControl"
+              >
+                <input
+                  aria-invalid="false"
+                  class="MuiInputBase-input MuiInput-input"
+                  name="password"
+                  type="password"
+                  value=""
+                />
+              </div>
+            </div>
+            <button
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-fullWidth"
+              tabindex="0"
+              type="button"
+            >
+              <span
+                class="MuiButton-label"
+              >
+                Зарегистрироваться
+              </span>
+              <span
+                class="MuiTouchRipple-root"
+              />
+            </button>
+            <p
+              class="form__text"
+            >
+              Уже зарегестрированны?
+              <a
+                href="/login"
+              >
+                 Войти
+              </a>
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
   </div>,
   "debug": [Function],
   "findAllByAltText": [Function],

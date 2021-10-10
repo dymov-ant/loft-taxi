@@ -13,7 +13,7 @@ const LoginForm = () => {
   }
 
   return (
-    <form className={styles.form}>
+    <form className={styles.form} aria-label="form">
       <h2 className={styles.form__title}>Войти</h2>
       <TextField
         label="Email"

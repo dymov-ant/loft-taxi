@@ -33,20 +33,30 @@ Object {
             <li
               class="item"
             >
-              <img
-                alt=""
-                src="pin.svg"
-              />
-              Карта
+              <a
+                href="/map"
+              >
+                <img
+                  alt=""
+                  src="pin.svg"
+                />
+                Карта
+              </a>
             </li>
             <li
               class="item"
             >
-              <img
-                alt=""
-                src="profile.svg"
-              />
-              Профиль
+              <a
+                aria-current="page"
+                class="active"
+                href="/profile"
+              >
+                <img
+                  alt=""
+                  src="profile.svg"
+                />
+                Профиль
+              </a>
             </li>
             <li
               class="item"
@@ -99,20 +109,30 @@ Object {
           <li
             class="item"
           >
-            <img
-              alt=""
-              src="pin.svg"
-            />
-            Карта
+            <a
+              href="/map"
+            >
+              <img
+                alt=""
+                src="pin.svg"
+              />
+              Карта
+            </a>
           </li>
           <li
             class="item"
           >
-            <img
-              alt=""
-              src="profile.svg"
-            />
-            Профиль
+            <a
+              aria-current="page"
+              class="active"
+              href="/profile"
+            >
+              <img
+                alt=""
+                src="profile.svg"
+              />
+              Профиль
+            </a>
           </li>
           <li
             class="item"
