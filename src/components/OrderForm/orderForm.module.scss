@@ -1,0 +1,64 @@
+.form {
+  &__top {
+    margin-bottom: 10px;
+  }
+
+  &__tariff {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
+}
+
+.tariffItem {
+  display: flex;
+  flex-direction: column;
+  background: #FFFFFF;
+  box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  opacity: 0.5;
+  cursor: pointer;
+  padding: 10px;
+
+  &_active {
+    opacity: 1;
+  }
+
+  &__name {
+    font-size: 16px;
+    line-height: 19px;
+    color: #000000;
+    margin-bottom: 8px;
+  }
+
+  &__price {
+    font-size: 11px;
+    line-height: 13px;
+    color: #828282;
+
+    span {
+      display: block;
+      font-size: 24px;
+      line-height: 28px;
+      color: #000000;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.successForm {
+  &__title {
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 42px;
+    margin-bottom: 14px;
+  }
+
+  &__text {
+    font-size: 18px;
+    line-height: 21px;
+    color: #7B7B7B;
+    margin-bottom: 35px;
+  }
+}

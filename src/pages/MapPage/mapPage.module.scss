@@ -1,0 +1,15 @@
+.mapPage {
+  &__wrapper {
+    position: relative;
+    width: 100%;
+    height: calc(100% - 106px);
+    overflow: hidden;
+  }
+
+  &__orderForm {
+    position: relative;
+    width: 486px;
+    margin-top: 60px;
+    margin-left: 70px;
+  }
+}

@@ -1,11 +1,18 @@
-import React from "react"
+import React, { Component } from "react"
+import Card from "../../components/Card"
+import ProfileForm from "../../components/ProfileForm"
+import style from "./profilePage.module.scss"
 
-const ProfilePage = () => {
-  return (
-    <>
-      profilePage
-    </>
-  )
+class ProfilePage extends Component {
+  render() {
+    return (
+      <div className={style.profile}>
+        <Card>
+          <ProfileForm/>
+        </Card>
+      </div>
+    )
+  }
 }
 
 export default ProfilePage

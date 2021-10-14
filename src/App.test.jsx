@@ -25,9 +25,7 @@ describe("App component", () => {
       </Provider>
     )
 
-    console.log(app.container.innerHTML)
     expect(app.container.innerHTML).toMatch("MainLayout")
-    // expect(app.getByText(/authPage/)).toBeInTheDocument()
   })
 
   it("App snapshot", () => {

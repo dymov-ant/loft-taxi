@@ -1,0 +1,98 @@
+.form {
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__title {
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 42px;
+    margin-bottom: 13px;
+  }
+
+  &__text {
+    font-size: 18px;
+    line-height: 21px;
+    color: #7B7B7B;
+    margin-bottom: 51px;
+  }
+
+  &__formWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 40px;
+  }
+
+  &__form {
+    width: 355px;
+    margin-right: 100px;
+  }
+
+  &__cardWrapper {
+    width: 347px;
+    height: 100%;
+  }
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__col {
+    width: calc(50% - 17px);
+  }
+}
+
+.card {
+  box-shadow: 0 5px 20px 2px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 28px 18px;
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 28px;
+  }
+
+  &__logo {
+
+  }
+
+  &__date {
+    font-size: 12px;
+    line-height: 14px;
+  }
+
+  &__number {
+    margin-bottom: 35px;
+
+    span {
+      font-size: 21px;
+      line-height: 25px;
+      margin-right: 20px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__schema {
+
+  }
+
+  &__mastercard {
+
+  }
+}
