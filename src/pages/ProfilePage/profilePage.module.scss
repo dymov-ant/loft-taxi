@@ -4,4 +4,12 @@
   align-items: center;
   height: calc(100vh - 106px);
   background: linear-gradient(0deg, rgba(28, 26, 25, 0.5), rgba(28, 26, 25, 0.5)), url("../../assets/img/map-bg.png") no-repeat center / cover;
+
+  @media screen and (max-width: 767px) {
+    height: 100%;
+  }
+
+  &__card {
+    padding: 10px;
+  }
 }

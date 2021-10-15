@@ -6,7 +6,12 @@
   padding: 21px 50px 20px 27px;
 
   @media screen and (max-width: 767px) {
-    background-color: #fff;
+    position: absolute;
+    top: 35px;
+    left: 0;
+    background-color: transparent;
+    z-index: 10;
+    padding: 0 10px 0;
   }
 }
 
@@ -78,6 +83,11 @@
     align-items: center;
     margin-right: 0;
     margin-bottom: 16px;
+
+    a {
+      display: flex;
+      align-items: center;
+    }
   }
 
   &:last-child {

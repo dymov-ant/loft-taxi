@@ -10,6 +10,11 @@
     font-size: 36px;
     line-height: 42px;
     margin-bottom: 13px;
+
+    @media screen and (max-width: 767px) {
+      font-size: 21px;
+      line-height: 25px;
+    }
   }
 
   &__text {
@@ -17,6 +22,11 @@
     line-height: 21px;
     color: #7B7B7B;
     margin-bottom: 51px;
+
+    @media screen and (max-width: 767px) {
+      text-align: center;
+      margin-bottom: 20px;
+    }
   }
 
   &__formWrapper {
@@ -24,16 +34,31 @@
     justify-content: space-between;
     align-items: flex-start;
     margin-bottom: 40px;
+
+    @media screen and (max-width: 767px) {
+      flex-direction: column-reverse;
+      margin-bottom: 10px;
+    }
   }
 
   &__form {
     width: 355px;
     margin-right: 100px;
+
+    @media screen and (max-width: 767px) {
+      width: 100%;
+      margin-right: 0;
+    }
   }
 
   &__cardWrapper {
     width: 347px;
     height: 100%;
+
+    @media screen and (max-width: 767px) {
+      width: 100%;
+      margin-bottom: 5px;
+    }
   }
 
   &__row {
@@ -44,6 +69,10 @@
 
   &__col {
     width: calc(50% - 17px);
+
+    @media screen and (max-width: 767px) {
+      width: calc(50% - 5px);
+    }
   }
 }
 
@@ -52,11 +81,19 @@
   border-radius: 10px;
   padding: 28px 18px;
 
+  @media screen and (max-width: 767px) {
+    padding: 14px 9px;
+  }
+
   &__top {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 28px;
+
+    @media screen and (max-width: 767px) {
+      margin-bottom: 10px;
+    }
   }
 
   &__logo {
@@ -70,6 +107,10 @@
 
   &__number {
     margin-bottom: 35px;
+
+    @media screen and (max-width: 767px) {
+      margin-bottom: 10px;
+    }
 
     span {
       font-size: 21px;

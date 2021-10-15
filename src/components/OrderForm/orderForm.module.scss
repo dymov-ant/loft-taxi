@@ -1,6 +1,10 @@
 .form {
   &__top {
     margin-bottom: 10px;
+
+    @media screen and (max-width: 767px) {
+      margin-bottom: 5px;
+    }
   }
 
   &__tariff {
@@ -8,6 +12,10 @@
     align-items: center;
     justify-content: space-between;
     margin-bottom: 30px;
+
+    @media screen and (max-width: 767px) {
+      margin-bottom: 10px;
+    }
   }
 }
 
@@ -20,6 +28,10 @@
   opacity: 0.5;
   cursor: pointer;
   padding: 10px;
+
+  @media screen and (max-width: 767px) {
+    padding: 7px;
+  }
 
   &_active {
     opacity: 1;
@@ -45,6 +57,12 @@
       margin-bottom: 10px;
     }
   }
+
+  img {
+    @media screen and (max-width: 767px) {
+      display: none;
+    }
+  }
 }
 
 .successForm {
@@ -53,6 +71,13 @@
     font-size: 36px;
     line-height: 42px;
     margin-bottom: 14px;
+
+    @media screen and (max-width: 767px) {
+      font-size: 21px;
+      line-height: 25px;
+      text-align: center;
+      margin-bottom: 10px;
+    }
   }
 
   &__text {
@@ -60,5 +85,12 @@
     line-height: 21px;
     color: #7B7B7B;
     margin-bottom: 35px;
+
+    @media screen and (max-width: 767px) {
+      font-size: 16px;
+      line-height: 19px;
+      text-align: center;
+      margin-bottom: 15px;
+    }
   }
 }

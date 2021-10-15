@@ -82,6 +82,7 @@ const OrderForm = () => {
           <FormControl
             fullWidth
             margin="normal"
+            disabled={!addressFrom}
           >
             <InputLabel>Куда</InputLabel>
             <Select

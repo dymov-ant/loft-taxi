@@ -7,9 +7,11 @@ class ProfilePage extends Component {
   render() {
     return (
       <div className={style.profile}>
-        <Card>
-          <ProfileForm/>
-        </Card>
+        <div className={style.profile__card}>
+          <Card>
+            <ProfileForm/>
+          </Card>
+        </div>
       </div>
     )
   }

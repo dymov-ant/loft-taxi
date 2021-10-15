@@ -15,12 +15,14 @@ class AuthPage extends Component {
           <img src={logoVertical} alt="Loft Taxi"/>
         </div>
         <div className={styles.authpage__right}>
-          <Card>
-            {location.pathname === "/login"
-              ? <LoginForm/>
-              : <RegisterForm/>
-            }
-          </Card>
+          <div className={styles.authpage__card}>
+            <Card>
+              {location.pathname === "/login"
+                ? <LoginForm/>
+                : <RegisterForm/>
+              }
+            </Card>
+          </div>
         </div>
       </div>
     )

@@ -25,6 +25,7 @@ const Header = () => {
 
   const logoutHandler = () => {
     dispatch(logOut())
+    closeMenu()
   }
 
   return (
@@ -38,13 +39,13 @@ const Header = () => {
       <nav className={`${styles.navbar} ${isOpen ? styles.navbar_open : ""}`}>
         <ul className={styles.list}>
           <li className={styles.item}>
-            <NavLink activeClassName={styles.active} to={ROUTE_NAMES.MAP} exact>
+            <NavLink activeClassName={styles.active} onClick={closeMenu} to={ROUTE_NAMES.MAP} exact>
               <img src={pinIcon} alt=""/>
               Карта
             </NavLink>
           </li>
           <li className={styles.item}>
-            <NavLink activeClassName={styles.active} to={ROUTE_NAMES.PROFILE}>
+            <NavLink activeClassName={styles.active} onClick={closeMenu} to={ROUTE_NAMES.PROFILE}>
               <img src={profileIcon} alt=""/>
               Профиль
             </NavLink>

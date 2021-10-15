@@ -1,5 +1,5 @@
 import DateFnsUtils from "@date-io/date-fns"
-import { Button, TextField, Typography } from "@material-ui/core"
+import { Button, makeStyles, TextField, Typography } from "@material-ui/core"
 import { KeyboardDatePicker, MuiPickersUtilsProvider } from "@material-ui/pickers"
 import React, { useState } from "react"
 import { Link } from "react-router-dom"
@@ -9,8 +9,18 @@ import mastercard from "../../assets/img/icons/master-card.svg"
 import { ROUTE_NAMES } from "../../router"
 import styles from "./profileForm.module.scss"
 
+const useStyles = makeStyles(theme => ({
+  input: {
+    margin: theme.spacing(1, 0),
+    ["@media (max-width:767px)"]: {
+      margin: theme.spacing(0, 0, 0.5)
+    }
+  }
+}))
+
 const ProfileForm = () => {
-  const card = false
+  const classes = useStyles()
+  const card = true
   const [submit, setSubmit] = useState(false)
   const [date, setDate] = useState(new Date())
 
@@ -54,7 +64,8 @@ const ProfileForm = () => {
                     label="Имя владельца"
                     type="text"
                     fullWidth
-                    margin="normal"
+                    // margin="normal"
+                    className={classes.input}
                   />
                 </div>
                 <div className={styles.form__row}>
@@ -62,7 +73,8 @@ const ProfileForm = () => {
                     label="Номер карты"
                     type="text"
                     fullWidth
-                    margin="normal"
+                    // margin="normal"
+                    className={classes.input}
                   />
                 </div>
                 <div className={styles.form__row}>
@@ -78,7 +90,7 @@ const ProfileForm = () => {
                         openTo="year"
                         views={["year", "month"]}
                         autoOk
-                        margin="normal"
+                        className={classes.input}
                       />
                     </MuiPickersUtilsProvider>
                   </div>
@@ -87,7 +99,7 @@ const ProfileForm = () => {
                       label="CVC"
                       type="text"
                       fullWidth
-                      margin="normal"
+                      className={classes.input}
                     />
                   </div>
                 </div>
