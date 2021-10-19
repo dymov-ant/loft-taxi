@@ -1,15 +1,17 @@
-import { Button, TextField } from "@material-ui/core"
 import React from "react"
-import { useDispatch } from "react-redux"
+import { Button, TextField } from "@material-ui/core"
+import { useDispatch, useSelector } from "react-redux"
 import { Link } from "react-router-dom"
-import { logIn } from "../../store/auth"
+import { authActions } from "../../store/actions/auth"
 import styles from "./authForm.module.scss"
 
 const RegisterForm = () => {
   const dispatch = useDispatch()
+  const isLoading = useSelector(state => state.auth.isLoading)
 
   const submitHandler = () => {
-    dispatch(logIn())
+    const payload = {email: "email42@example.com", password: "password", name: "Name", surname: "Surname"}
+    dispatch(authActions.fetchRegistration(payload))
   }
 
   return (
@@ -41,6 +43,7 @@ const RegisterForm = () => {
         color="primary"
         fullWidth
         onClick={submitHandler}
+        disabled={isLoading}
       >
         Зарегистрироваться
       </Button>

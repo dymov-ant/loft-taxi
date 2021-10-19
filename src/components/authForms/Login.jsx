@@ -1,15 +1,16 @@
-import { Button, TextField } from "@material-ui/core"
 import React from "react"
-import { useDispatch } from "react-redux"
 import { Link } from "react-router-dom"
-import { logIn } from "../../store/auth"
+import { useDispatch, useSelector } from "react-redux"
+import { Button, TextField } from "@material-ui/core"
+import { authActions } from "../../store/actions/auth"
 import styles from "./authForm.module.scss"
 
 const LoginForm = () => {
   const dispatch = useDispatch()
+  const isLoading = useSelector(state => state.auth.isLoading)
 
   const submitHandler = () => {
-    dispatch(logIn())
+    dispatch(authActions.fetchLogin({email: "test@test.com", password: "123123"}))
   }
 
   return (
@@ -37,6 +38,7 @@ const LoginForm = () => {
         variant="contained"
         color="primary"
         fullWidth
+        disabled={isLoading}
         onClick={submitHandler}
       >
         Войти

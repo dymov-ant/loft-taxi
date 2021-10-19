@@ -20,6 +20,133 @@ Object {
           class="authpage__right"
         >
           <div
+            class="authpage__card"
+          >
+            <div
+              class="card"
+            >
+              <form
+                aria-label="form"
+                class="form"
+              >
+                <h2
+                  class="form__title"
+                >
+                  Регистрация
+                </h2>
+                <div
+                  class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+                >
+                  <label
+                    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
+                    data-shrink="false"
+                  >
+                    Email*
+                  </label>
+                  <div
+                    class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-fullWidth MuiInput-fullWidth MuiInputBase-formControl MuiInput-formControl"
+                  >
+                    <input
+                      aria-invalid="false"
+                      class="MuiInputBase-input MuiInput-input"
+                      name="email"
+                      type="email"
+                      value=""
+                    />
+                  </div>
+                </div>
+                <div
+                  class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+                >
+                  <label
+                    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
+                    data-shrink="false"
+                  >
+                    Как вас зовут?*
+                  </label>
+                  <div
+                    class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-fullWidth MuiInput-fullWidth MuiInputBase-formControl MuiInput-formControl"
+                  >
+                    <input
+                      aria-invalid="false"
+                      class="MuiInputBase-input MuiInput-input"
+                      name="username"
+                      type="text"
+                      value=""
+                    />
+                  </div>
+                </div>
+                <div
+                  class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+                >
+                  <label
+                    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
+                    data-shrink="false"
+                  >
+                    Придумайте пароль*
+                  </label>
+                  <div
+                    class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-fullWidth MuiInput-fullWidth MuiInputBase-formControl MuiInput-formControl"
+                  >
+                    <input
+                      aria-invalid="false"
+                      class="MuiInputBase-input MuiInput-input"
+                      name="password"
+                      type="password"
+                      value=""
+                    />
+                  </div>
+                </div>
+                <button
+                  class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-fullWidth"
+                  tabindex="0"
+                  type="button"
+                >
+                  <span
+                    class="MuiButton-label"
+                  >
+                    Зарегистрироваться
+                  </span>
+                  <span
+                    class="MuiTouchRipple-root"
+                  />
+                </button>
+                <p
+                  class="form__text"
+                >
+                  Уже зарегестрированны?
+                  <a
+                    href="/login"
+                  >
+                     Войти
+                  </a>
+                </p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="authpage__wrapper"
+    >
+      <div
+        class="authpage__left"
+      >
+        <img
+          alt="Loft Taxi"
+          src="logo-v.svg"
+        />
+      </div>
+      <div
+        class="authpage__right"
+      >
+        <div
+          class="authpage__card"
+        >
+          <div
             class="card"
           >
             <form
@@ -120,125 +247,6 @@ Object {
               </p>
             </form>
           </div>
-        </div>
-      </div>
-    </div>
-  </body>,
-  "container": <div>
-    <div
-      class="authpage__wrapper"
-    >
-      <div
-        class="authpage__left"
-      >
-        <img
-          alt="Loft Taxi"
-          src="logo-v.svg"
-        />
-      </div>
-      <div
-        class="authpage__right"
-      >
-        <div
-          class="card"
-        >
-          <form
-            aria-label="form"
-            class="form"
-          >
-            <h2
-              class="form__title"
-            >
-              Регистрация
-            </h2>
-            <div
-              class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
-            >
-              <label
-                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
-                data-shrink="false"
-              >
-                Email*
-              </label>
-              <div
-                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-fullWidth MuiInput-fullWidth MuiInputBase-formControl MuiInput-formControl"
-              >
-                <input
-                  aria-invalid="false"
-                  class="MuiInputBase-input MuiInput-input"
-                  name="email"
-                  type="email"
-                  value=""
-                />
-              </div>
-            </div>
-            <div
-              class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
-            >
-              <label
-                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
-                data-shrink="false"
-              >
-                Как вас зовут?*
-              </label>
-              <div
-                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-fullWidth MuiInput-fullWidth MuiInputBase-formControl MuiInput-formControl"
-              >
-                <input
-                  aria-invalid="false"
-                  class="MuiInputBase-input MuiInput-input"
-                  name="username"
-                  type="text"
-                  value=""
-                />
-              </div>
-            </div>
-            <div
-              class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
-            >
-              <label
-                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
-                data-shrink="false"
-              >
-                Придумайте пароль*
-              </label>
-              <div
-                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-fullWidth MuiInput-fullWidth MuiInputBase-formControl MuiInput-formControl"
-              >
-                <input
-                  aria-invalid="false"
-                  class="MuiInputBase-input MuiInput-input"
-                  name="password"
-                  type="password"
-                  value=""
-                />
-              </div>
-            </div>
-            <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-fullWidth"
-              tabindex="0"
-              type="button"
-            >
-              <span
-                class="MuiButton-label"
-              >
-                Зарегистрироваться
-              </span>
-              <span
-                class="MuiTouchRipple-root"
-              />
-            </button>
-            <p
-              class="form__text"
-            >
-              Уже зарегестрированны?
-              <a
-                href="/login"
-              >
-                 Войти
-              </a>
-            </p>
-          </form>
         </div>
       </div>
     </div>

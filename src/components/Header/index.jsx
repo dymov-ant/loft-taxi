@@ -8,8 +8,8 @@ import pinIcon from "../../assets/img/icons/pin.svg"
 import profileIcon from "../../assets/img/icons/profile.svg"
 import logo from "../../assets/img/logo.svg"
 import { ROUTE_NAMES } from "../../router"
-import { logOut } from "../../store/auth"
 import styles from "./header.module.scss"
+import { authActions } from "../../store/actions/auth"
 
 const Header = () => {
   const dispatch = useDispatch()
@@ -24,7 +24,7 @@ const Header = () => {
   }
 
   const logoutHandler = () => {
-    dispatch(logOut())
+    dispatch(authActions.setIsAuth(false))
     closeMenu()
   }
 
@@ -39,13 +39,22 @@ const Header = () => {
       <nav className={`${styles.navbar} ${isOpen ? styles.navbar_open : ""}`}>
         <ul className={styles.list}>
           <li className={styles.item}>
-            <NavLink activeClassName={styles.active} onClick={closeMenu} to={ROUTE_NAMES.MAP} exact>
+            <NavLink
+              activeClassName={styles.active}
+              onClick={closeMenu}
+              to={ROUTE_NAMES.MAP}
+              exact
+            >
               <img src={pinIcon} alt=""/>
               Карта
             </NavLink>
           </li>
           <li className={styles.item}>
-            <NavLink activeClassName={styles.active} onClick={closeMenu} to={ROUTE_NAMES.PROFILE}>
+            <NavLink
+              activeClassName={styles.active}
+              onClick={closeMenu}
+              to={ROUTE_NAMES.PROFILE}
+            >
               <img src={profileIcon} alt=""/>
               Профиль
             </NavLink>

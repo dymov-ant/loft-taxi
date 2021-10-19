@@ -1,5 +1,5 @@
-import { logIn, logOut } from "./actions"
-import authReducer from "./reducer"
+import { logIn, logOut } from "../../actions/auth"
+import authReducer from "./index"
 
 describe("authReducer", () => {
   it("incorrect action", () => {
