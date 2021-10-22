@@ -1,25 +1,24 @@
-import { Button, FormControl, InputLabel, MenuItem, Select } from "@material-ui/core"
-import classNames from "classnames/bind"
 import React, { useState } from "react"
+import { useDispatch, useSelector } from "react-redux"
+import classNames from "classnames/bind"
+import { Button, FormControl, InputLabel, MenuItem, Select } from "@material-ui/core"
+import { orderActions } from "../../store/actions/order"
+import Spinner from "../Spinner"
 import standardImg from "../../assets/img/tariffs/tariff_1.png"
 import premiumImg from "../../assets/img/tariffs/tariff_2.png"
 import businessImg from "../../assets/img/tariffs/tariff_3.png"
 import style from "./orderForm.module.scss"
 
 const OrderForm = () => {
-  const ADDRESS = [
-    "Пункт A",
-    "Пункт B",
-    "Пункт C",
-    "Пункт D"
-  ]
-
   const cx = classNames.bind(style)
+  const dispatch = useDispatch()
+  const addressList = useSelector(state => state.order.addressList)
+  const isLoading = useSelector(state => state.order.isLoading)
+  const route = useSelector(state => state.order.route)
 
   const [addressFrom, setAddressFrom] = useState("")
   const [addressTo, setAddressTo] = useState("")
   const [tariff, setTariff] = useState(1)
-  const [submit, setSubmit] = useState(false)
 
   const handleSelect = event => {
     if (event.target.name === "from") {
@@ -31,18 +30,18 @@ const OrderForm = () => {
 
   const handleSubmit = event => {
     event.preventDefault()
-    setSubmit(true)
+    dispatch(orderActions.getRoute(addressFrom, addressTo))
   }
 
   const handleReset = () => {
     setTariff(1)
     setAddressFrom("")
     setAddressTo("")
-    setSubmit(false)
+    dispatch(orderActions.clearRoute())
   }
 
   return (
-    submit
+    route.length > 0
       ? <div className={style.successForm}>
         <p className={style.successForm__title}>Заказ размещен</p>
         <p className={style.successForm__text}>
@@ -62,6 +61,7 @@ const OrderForm = () => {
           <FormControl
             fullWidth
             margin="normal"
+            disabled={isLoading}
           >
             <InputLabel>Откуда</InputLabel>
             <Select
@@ -76,7 +76,7 @@ const OrderForm = () => {
                 getContentAnchorEl: null
               }}
             >
-              {ADDRESS.map(item => <MenuItem value={item} key={item}>{item}</MenuItem>)}
+              {addressList.map(item => <MenuItem value={item} key={item}>{item}</MenuItem>)}
             </Select>
           </FormControl>
           <FormControl
@@ -97,7 +97,7 @@ const OrderForm = () => {
                 getContentAnchorEl: null
               }}
             >
-              {ADDRESS.map(item => item !== addressFrom && <MenuItem value={item} key={item}>{item}</MenuItem>)}
+              {addressList.map(item => item !== addressFrom && <MenuItem value={item} key={item}>{item}</MenuItem>)}
             </Select>
           </FormControl>
         </div>
@@ -120,7 +120,7 @@ const OrderForm = () => {
               <img src={premiumImg} alt="стандарт"/>
             </div>
             <div
-              className={cx(style.tariffItem, { [style.tariffItem_active]: tariff === 3 })}
+              className={cx(style.tariffItem, {[style.tariffItem_active]: tariff === 3})}
               onClick={() => setTariff(3)}
             >
               <p className={style.tariffItem__name}>Бизнес</p>
@@ -129,16 +129,19 @@ const OrderForm = () => {
             </div>
           </div>
         }
-
-        <Button
-          color="primary"
-          fullWidth
-          variant="contained"
-          onClick={handleSubmit}
-          disabled={!(addressTo && addressFrom && tariff)}
-        >
-          Заказать
-        </Button>
+        {
+          isLoading
+            ? <Spinner/>
+            : <Button
+              color="primary"
+              fullWidth
+              variant="contained"
+              onClick={handleSubmit}
+              disabled={!(addressTo && addressFrom && tariff)}
+            >
+              Заказать
+            </Button>
+        }
       </div>
   )
 }

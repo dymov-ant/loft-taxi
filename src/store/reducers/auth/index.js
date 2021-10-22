@@ -1,8 +1,9 @@
-import { SET_IS_LOADING, SET_IS_LOGGED_IN } from "./types"
+import { SET_ERROR, SET_IS_LOADING, SET_IS_LOGGED_IN } from "./types"
 
 const initialState = {
   isLoggedIn: false,
-  isLoading: false
+  isLoading: false,
+  error: null
 }
 
 export default function authReducer(state = initialState, action) {
@@ -11,6 +12,8 @@ export default function authReducer(state = initialState, action) {
       return {...state, isLoggedIn: action.payload}
     case SET_IS_LOADING:
       return {...state, isLoading: action.payload}
+    case SET_ERROR:
+      return {...state, error: action.payload}
     default:
       return state
   }

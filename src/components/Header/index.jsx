@@ -24,7 +24,7 @@ const Header = () => {
   }
 
   const logoutHandler = () => {
-    dispatch(authActions.setIsAuth(false))
+    dispatch(authActions.logout())
     closeMenu()
   }
 

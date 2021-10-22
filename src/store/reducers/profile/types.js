@@ -1,0 +1,5 @@
+export const FETCHING_PROFILE = "profile/FETCHING_PROFILE"
+export const FETCHING_SUCCESS_PROFILE = "profile/FETCHING_SUCCESS_PROFILE"
+export const FETCHING_ERROR_PROFILE = "profile/FETCHING_SUCCESS_PROFILE"
+export const GET_PROFILE = "profile/GET_PROFILE"
+export const SET_PROFILE = "profile/SET_PROFILE"
