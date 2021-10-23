@@ -15,7 +15,7 @@ const initialState = {
   error: null
 }
 
-export default function (state = initialState, action) {
+export default function orderReducer(state = initialState, action) {
   switch (action.type) {
     case FETCHING_ADDRESS_LIST:
       return {...state, isLoading: true, error: null}

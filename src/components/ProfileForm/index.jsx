@@ -1,17 +1,22 @@
+import React, { useEffect } from "react"
+import { useDispatch, useSelector } from "react-redux"
+import { Link } from "react-router-dom"
+import InputMask from "react-input-mask"
+import { useFormik } from "formik"
 import DateFnsUtils from "@date-io/date-fns"
 import { Button, makeStyles, TextField, Typography } from "@material-ui/core"
 import { KeyboardDatePicker, MuiPickersUtilsProvider } from "@material-ui/pickers"
-import React, { useState } from "react"
-import { Link } from "react-router-dom"
-import logoCard from "../../assets/img/icons/card-logo.svg"
-import schemaCard from "../../assets/img/icons/card-schema.svg"
-import mastercard from "../../assets/img/icons/master-card.svg"
+import SavedCard from "../SavedCard"
+import Spinner from "../Spinner"
+import { cardSchema } from "../../utils/validationsSchemas"
+import { profileActions } from "../../store/actions/profile"
 import { ROUTE_NAMES } from "../../router"
 import styles from "./profileForm.module.scss"
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   input: {
     margin: theme.spacing(1, 0),
+    // eslint-disable-next-line
     ["@media (max-width:767px)"]: {
       margin: theme.spacing(0, 0, 0.5)
     }
@@ -20,69 +25,94 @@ const useStyles = makeStyles(theme => ({
 
 const ProfileForm = () => {
   const classes = useStyles()
-  const card = true
-  const [submit, setSubmit] = useState(false)
-  const [date, setDate] = useState(new Date())
-
-  const handleDateChange = date => {
-    setDate(date)
+  const dispatch = useDispatch()
+  const isLoading = useSelector(state => state.profile.isLoading)
+  const card = useSelector(state => state.profile.card)
+  const isSuccessSubmitting = useSelector(state => state.profile.isSuccessSubmitting)
+  const initialValues = card ? {...card} : {
+    cardName: "",
+    cardNumber: "",
+    expiryDate: new Date(),
+    cvc: ""
   }
 
-  const handleSubmit = event => {
-    event.preventDefault()
-    setSubmit(true)
-  }
+  const formik = useFormik({
+    initialValues,
+    validationSchema: cardSchema,
+    onSubmit: (values) => {
+      dispatch(profileActions.setProfile(values))
+    }
+  })
+
+  useEffect(() => {
+    return () => {
+      dispatch(profileActions.successSubmitting(false))
+    }
+  }, [dispatch])
+
 
   return (
     <div className={styles.form__wrapper}>
       <h1 className={styles.form__title}>Профиль</h1>
       <p className={styles.form__text}>
         {
-          submit
+          isSuccessSubmitting
             ? "Платёжные данные обновлены. Теперь вы можете заказывать такси."
             : "Введите платежные данные"
         }
       </p>
       {
-        submit
+        isSuccessSubmitting
           ? <>
             <Button
               variant="contained"
               color="primary"
-              onClick={handleSubmit}
+              component={Link}
+              to={ROUTE_NAMES.MAP}
             >
-              <Link to={ROUTE_NAMES.MAP}>
-                Перейти на карту
-              </Link>
+              Перейти на карту
             </Button>
           </>
           : <>
-            <form className={styles.form__formWrapper}>
+            <form className={styles.form__formWrapper} noValidate>
               <div className={styles.form__form}>
                 <div className={styles.form__row}>
                   <TextField
                     label="Имя владельца"
                     type="text"
                     fullWidth
-                    // margin="normal"
                     className={classes.input}
+                    inputProps={{style: {textTransform: "uppercase"}}}
+                    name="cardName"
+                    value={formik.values.cardName}
+                    onChange={formik.handleChange}
+                    error={formik.touched.cardName && Boolean(formik.errors.cardName)}
+                    helperText={formik.touched.cardName && formik.errors.cardName}
                   />
                 </div>
                 <div className={styles.form__row}>
-                  <TextField
-                    label="Номер карты"
-                    type="text"
-                    fullWidth
-                    // margin="normal"
-                    className={classes.input}
-                  />
+                  <InputMask
+                    mask="9999 9999 9999 9999"
+                    value={formik.values.cardNumber}
+                    onChange={formik.handleChange}
+                    maskChar={null}
+                  >
+                    {props => <TextField
+                      {...props}
+                      label="Номер карты"
+                      type="text"
+                      fullWidth
+                      className={classes.input}
+                      name="cardNumber"
+                      error={formik.touched.cardNumber && Boolean(formik.errors.cardNumber)}
+                      helperText={formik.touched.cardNumber && formik.errors.cardNumber}
+                    />}
+                  </InputMask>
                 </div>
                 <div className={styles.form__row}>
                   <div className={styles.form__col}>
                     <MuiPickersUtilsProvider utils={DateFnsUtils}>
                       <KeyboardDatePicker
-                        value={date}
-                        onChange={handleDateChange}
                         label="MM/YY"
                         format="MM/yy"
                         minDate={new Date()}
@@ -91,50 +121,44 @@ const ProfileForm = () => {
                         views={["year", "month"]}
                         autoOk
                         className={classes.input}
+                        name="expiryDate"
+                        value={formik.values.expiryDate}
+                        onChange={val => formik.setFieldValue("expiryDate", val)}
+                        error={formik.touched.expiryDate && Boolean(formik.errors.expiryDate)}
+                        helperText={formik.touched.expiryDate && formik.errors.expiryDate}
                       />
                     </MuiPickersUtilsProvider>
                   </div>
                   <div className={styles.form__col}>
-                    <TextField
-                      label="CVC"
-                      type="text"
-                      fullWidth
-                      className={classes.input}
-                    />
+                    <InputMask
+                      mask="999"
+                      value={formik.values.cvc}
+                      onChange={formik.handleChange}
+                      maskChar={null}
+                    >
+                      {props => <TextField
+                        {...props}
+                        label="CVC"
+                        type="text"
+                        fullWidth
+                        className={classes.input}
+                        name="cvc"
+                        value={formik.values.cvc}
+                        onChange={formik.handleChange}
+                        error={formik.touched.cvc && Boolean(formik.errors.cvc)}
+                        helperText={formik.touched.cvc && formik.errors.cvc}
+                      />}
+                    </InputMask>
                   </div>
                 </div>
               </div>
               <div className={styles.form__cardWrapper}>
                 {
                   card
-                    ? <div className={styles.card}>
-                      <div className={styles.card__top}>
-                        <img
-                          className={styles.card__logo}
-                          src={logoCard}
-                          alt="лого"
-                        />
-                        <p className={styles.card__date}>05/08</p>
-                      </div>
-                      <p className={styles.card__number}>
-                        <span>5545</span>
-                        <span>2300</span>
-                        <span>3432</span>
-                        <span>4521</span>
-                      </p>
-                      <div className={styles.card__bottom}>
-                        <img
-                          className={styles.card__schema}
-                          src={schemaCard}
-                          alt="чип"
-                        />
-                        <img
-                          className={styles.card__mastercard}
-                          src={mastercard}
-                          alt="mastercard"
-                        />
-                      </div>
-                    </div>
+                    ? <SavedCard
+                      cardNumber={card.cardNumber}
+                      expiryDate={card.expiryDate}
+                    />
                     : <Typography
                       variant="h6"
                       align="center"
@@ -145,13 +169,18 @@ const ProfileForm = () => {
 
               </div>
             </form>
-            <Button
-              variant="contained"
-              color="primary"
-              onClick={handleSubmit}
-            >
-              Сохранить
-            </Button>
+            {
+              isLoading
+                ? <Spinner/>
+                : <Button
+                  variant="contained"
+                  color="primary"
+                  type="submit"
+                  onClick={formik.handleSubmit}
+                >
+                  Сохранить
+                </Button>
+            }
           </>
       }
     </div>

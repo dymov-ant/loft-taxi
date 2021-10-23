@@ -3,6 +3,8 @@ import { login, registration } from "../../../api/auth"
 import { FETCH_LOGIN, FETCH_REGISTRATION, LOGOUT } from "../../reducers/auth/types"
 import { authActions } from "./index"
 import { AUTH_TOKEN } from "../../../constants"
+import { profileActions } from "../profile"
+import { orderActions } from "../order"
 
 function* loginWorker(action) {
   try {
@@ -13,6 +15,7 @@ function* loginWorker(action) {
       localStorage.setItem(AUTH_TOKEN, response.data.token)
       yield put(authActions.setIsAuth(true))
       yield put(authActions.setError(null))
+      yield put(profileActions.getProfile())
     } else {
       yield put(authActions.setError(response.data.error))
       console.log("Ошибка при логине")
@@ -47,6 +50,8 @@ function* registrationWorker(action) {
 function* logoutWorker() {
   localStorage.removeItem(AUTH_TOKEN)
   yield put(authActions.setIsAuth(false))
+  yield put(profileActions.fetchingSuccess(null))
+  yield put(orderActions.fetchingSuccessRoute([]))
 }
 
 export function* authWatcher() {

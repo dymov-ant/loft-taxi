@@ -1,5 +1,4 @@
 import { MuiThemeProvider } from "@material-ui/core"
-import { theme } from "loft-taxi-mui-theme"
 import React from "react"
 import ReactDOM from "react-dom"
 import { Provider } from "react-redux"
@@ -8,6 +7,7 @@ import App from "./App"
 import "./index.css"
 import reportWebVitals from "./reportWebVitals"
 import { store } from "./store"
+import { theme } from "./utils/theme"
 
 ReactDOM.render(
   <React.StrictMode>

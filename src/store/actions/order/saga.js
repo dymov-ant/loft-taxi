@@ -24,7 +24,6 @@ function* getRouteWorker(action) {
     yield put(orderActions.fetchingRoute())
     const {payload} = action
     const response = yield call(getRoute, payload)
-    console.log(response)
     if (response.data.length) {
       yield put(orderActions.fetchingSuccessRoute(response.data))
     } else {

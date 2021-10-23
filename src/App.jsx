@@ -4,20 +4,19 @@ import { authActions } from "./store/actions/auth"
 import { AUTH_TOKEN } from "./constants"
 import { connect } from "react-redux"
 import { orderActions } from "./store/actions/order"
+import { profileActions } from "./store/actions/profile"
 
 class App extends Component {
-
   componentDidMount() {
     this.props.getAddressList()
     if (localStorage.getItem(AUTH_TOKEN)) {
       this.props.login(true)
+      this.props.getProfile()
     }
   }
 
   render() {
-    return (
-      <MainLayout/>
-    )
+    return <MainLayout/>
   }
 }
 
@@ -30,9 +29,9 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
   return {
-    login: isAuth => dispatch(authActions.setIsAuth(isAuth)),
+    login: (isAuth) => dispatch(authActions.setIsAuth(isAuth)),
     getAddressList: () => dispatch(orderActions.getAddressList()),
-    getRoute: (addressFrom, addressTo) => dispatch(orderActions.getRoute(addressFrom, addressTo))
+    getProfile: () => dispatch(profileActions.getProfile())
   }
 }
 

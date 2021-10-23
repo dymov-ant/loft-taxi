@@ -7,7 +7,7 @@ function* getProfileWorker() {
   try {
     yield put(profileActions.fetchingProfile())
     const response = yield call(getProfile)
-    if (response.data.success) {
+    if (response.data.id) {
       yield put(profileActions.fetchingSuccess(response.data))
     } else {
       yield put(profileActions.fetchingError(response.data.error))
@@ -27,6 +27,7 @@ function* setProfileWorker(action) {
     if (response.data.success) {
       delete payload.token
       yield put(profileActions.fetchingSuccess(payload))
+      yield put(profileActions.successSubmitting(true))
     } else {
       yield put(profileActions.fetchingError(response.data.error))
       console.log("Ошибка при сохранении данных банковской карты")
