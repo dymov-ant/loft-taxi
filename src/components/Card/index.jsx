@@ -1,12 +1,11 @@
-import React from "react"
-import styles from "./card.module.scss"
+import React from 'react';
+import PropTypes from 'prop-types';
+import styles from './card.module.scss';
 
-const Card = ({ children }) => {
-  return (
-    <div className={styles.card}>
-      {children}
-    </div>
-  )
-}
+const Card = ({ children }) => <div className={styles.card}>{children}</div>;
 
-export default Card
+Card.propTypes = {
+  children: PropTypes.node.isRequired,
+};
+
+export default Card;

@@ -1,56 +1,56 @@
-import { createTheme } from "@material-ui/core"
-import { orange } from "@material-ui/core/colors"
+import { createTheme } from '@material-ui/core';
+import { orange } from '@material-ui/core/colors';
 
 export const theme = createTheme({
   palette: {
     primary: {
-      main: "#ffc617"
+      main: '#ffc617',
     },
     secondary: {
-      main: "#ff0000"
-    }
+      main: '#ff0000',
+    },
   },
   status: {
-    danger: orange[500]
+    danger: orange[50],
   },
   overrides: {
     MuiFormLabel: {
       root: {
-        "&$focused": {
-          color: "#1473e6"
-        }
-      }
+        '&$focused': {
+          color: '#1473e6',
+        },
+      },
     },
     MuiLink: {
       root: {
-        color: "#1473e6",
-        cursor: "pointer"
-      }
+        color: '#1473e6',
+        cursor: 'pointr',
+      },
     },
     MuiInput: {
       underline: {
-        "&:after": {
-          "border-bottom-color": "#1473e6"
-        }
-      }
+        '&:after': {
+          'border-bottom-color': '#1473e6',
+        },
+      },
     },
     MuiFormHelperText: {
       root: {
-        position: "absolute",
-        bottom: "-1.4em"
-      }
+        position: 'absolute',
+        bottom: '-1.4em',
+      },
     },
     MuiButton: {
       root: {
-        textTransform: "none"
+        textTransform: 'none',
       },
       containedPrimary: {
-        boxShadow: "none",
-        backgroundColor: "#ffc617",
-        "&:focus": {
-          boxShadow: "0 0 0 0.2rem rgba(0,123,255,.5)"
-        }
-      }
-    }
-  }
-})
+        boxShadow: 'none',
+        backgroundColor: '#ffc617',
+        '&:focus': {
+          boxShadow: '0 0 0 0.2rem rgba(0,123,255,.5)',
+        },
+      },
+    },
+  },
+});

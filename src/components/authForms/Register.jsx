@@ -1,42 +1,42 @@
-import React from "react"
-import { useDispatch, useSelector } from "react-redux"
-import { Link } from "react-router-dom"
-import { Button, makeStyles, TextField } from "@material-ui/core"
-import { useFormik } from "formik"
-import ErrorMessage from "../ErrorMessage"
-import Spinner from "../Spinner"
-import { authActions } from "../../store/actions/auth"
-import { registrationSchema } from "../../utils/validationsSchemas"
-import styles from "./authForm.module.scss"
+import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
+import { Button, makeStyles, TextField } from '@material-ui/core';
+import { useFormik } from 'formik';
+import ErrorMessage from '../ErrorMessage';
+import Spinner from '../Spinner';
+import { authActions } from '../../store/actions/auth';
+import { registrationSchema } from '../../utils/validationsSchemas';
+import styles from './authForm.module.scss';
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   input: {
-    margin: theme.spacing(2, 0)
+    margin: theme.spacing(2, 0),
   },
   button: {
-    marginTop: theme.spacing(2)
-  }
-}))
+    marginTop: theme.spacing(2),
+  },
+}));
 
 const RegisterForm = () => {
-  const classes = useStyles()
-  const dispatch = useDispatch()
-  const isLoading = useSelector(state => state.auth.isLoading)
-  const error = useSelector(state => state.auth.error)
+  const classes = useStyles();
+  const dispatch = useDispatch();
+  const isLoading = useSelector((state) => state.auth.isLoading);
+  const error = useSelector((state) => state.auth.error);
   const initialValues = {
-    email: "",
-    password: "",
-    name: "",
-    surname: ""
-  }
+    email: '',
+    password: '',
+    name: '',
+    surname: '',
+  };
 
   const formik = useFormik({
     initialValues,
     validationSchema: registrationSchema,
     onSubmit: (values) => {
-      dispatch(authActions.fetchRegistration(values))
-    }
-  })
+      dispatch(authActions.fetchRegistration(values));
+    },
+  });
 
   return (
     <form className={styles.form} aria-label="form" onSubmit={formik.handleSubmit}>
@@ -85,27 +85,27 @@ const RegisterForm = () => {
         error={formik.touched.password && Boolean(formik.errors.password)}
         helperText={formik.touched.password && formik.errors.password}
       />
-      {error && <ErrorMessage message={error}/>}
-      {
-        isLoading
-          ? <Spinner/>
-          : <Button
-            className={classes.button}
-            variant="contained"
-            type="submit"
-            color="primary"
-            fullWidth
-            disabled={isLoading}
-          >
-            Зарегистрироваться
-          </Button>
-      }
+      {error && <ErrorMessage message={error} />}
+      {isLoading ? (
+        <Spinner />
+      ) : (
+        <Button
+          className={classes.button}
+          variant="contained"
+          type="submit"
+          color="primary"
+          fullWidth
+          disabled={isLoading}
+        >
+          Зарегистрироваться
+        </Button>
+      )}
       <p className={styles.form__text}>
         Уже зарегистрированны?
         <Link to="/login"> Войти</Link>
       </p>
     </form>
-  )
-}
+  );
+};
 
-export default RegisterForm
+export default RegisterForm;
