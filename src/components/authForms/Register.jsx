@@ -39,7 +39,7 @@ const RegisterForm = () => {
   });
 
   return (
-    <form className={styles.form} aria-label="form" onSubmit={formik.handleSubmit}>
+    <form className={styles.form} onSubmit={formik.handleSubmit} noValidate data-testid="registrationForm">
       <h2 className={styles.form__title}>Регистрация</h2>
       <TextField
         className={classes.input}

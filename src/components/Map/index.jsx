@@ -1,5 +1,5 @@
-import mapbox from 'mapbox-gl';
 import React, { useEffect, useRef, useState } from 'react';
+import mapbox from 'mapbox-gl';
 import { useSelector } from 'react-redux';
 import style from './map.module.scss';
 

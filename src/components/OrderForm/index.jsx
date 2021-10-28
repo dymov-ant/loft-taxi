@@ -102,6 +102,7 @@ const OrderForm = () => {
           <div
             className={cx(style.tariffItem, { [style.tariffItem_active]: tariff === 1 })}
             onClick={() => setTariff(1)}
+            data-testid="tariff-1"
           >
             <p className={style.tariffItem__name}>Стандарт</p>
             <p className={style.tariffItem__price}>
@@ -112,6 +113,7 @@ const OrderForm = () => {
           <div
             className={cx(style.tariffItem, { [style.tariffItem_active]: tariff === 2 })}
             onClick={() => setTariff(2)}
+            data-testid="tariff-2"
           >
             <p className={style.tariffItem__name}>Премиум</p>
             <p className={style.tariffItem__price}>
@@ -122,6 +124,7 @@ const OrderForm = () => {
           <div
             className={cx(style.tariffItem, { [style.tariffItem_active]: tariff === 3 })}
             onClick={() => setTariff(3)}
+            data-testid="tariff-3"
           >
             <p className={style.tariffItem__name}>Бизнес</p>
             <p className={style.tariffItem__price}>

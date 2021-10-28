@@ -28,7 +28,7 @@ const LoginForm = () => {
   });
 
   return (
-    <form className={styles.form} aria-label="form" onSubmit={formik.handleSubmit} noValidate>
+    <form className={styles.form} onSubmit={formik.handleSubmit} noValidate data-testid="loginForm">
       <h2 className={styles.form__title}>Войти</h2>
       <TextField
         label="Email"

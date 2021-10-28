@@ -1,110 +1,83 @@
-import { render, screen } from "@testing-library/react"
-import userEvent from "@testing-library/user-event"
-import { createMemoryHistory } from "history"
-import React from "react"
-import * as redux from "react-redux"
-import { Provider } from "react-redux"
-import { Router } from "react-router-dom"
-import { ROUTE_NAMES } from "../../router"
-import { logOut } from "../../store/auth"
-import Header from "./index"
+import React from 'react';
+import { render, screen } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
+import { Provider } from 'react-redux';
+import { Router } from 'react-router-dom';
+import { createMemoryHistory } from 'history';
+import configureStore from 'redux-mock-store';
+import { ROUTE_NAMES } from '../../router';
+import { renderWithRedux } from '../../utils/renderWithRedux';
+import Header from './index';
+import { authActions } from '../../store/actions/auth';
 
-const history = createMemoryHistory()
-const mockStore = {
-  getState: () => ({ auth: { isLoggedIn: true } }),
-  subscribe: () => {
-  },
-  dispatch: () => {
-  }
-}
+describe('Header component', () => {
+  const initialState = {
+    auth: {
+      isLoggedIn: true,
+    },
+  };
 
-describe("Header component", () => {
-  it("Header renders", () => {
-    render(
-      <Provider store={mockStore}>
-        <Router history={history}>
-          <Header/>
-        </Router>
-      </Provider>
-    )
+  it('Header renders', () => {
+    const { container } = renderWithRedux(<Header />, initialState);
 
-    expect(screen.getByRole("navigation")).toBeInTheDocument()
-  })
+    expect(container).toBeInTheDocument();
+  });
 
-  it("openMenu works", () => {
-    render(
-      <Provider store={mockStore}>
-        <Router history={history}>
-          <Header/>
-        </Router>
-      </Provider>
-    )
-    const burger = document.querySelector(".burgerBtn")
-    const nav = screen.getByRole("navigation")
-    userEvent.click(burger)
+  it('openMenu works', () => {
+    renderWithRedux(<Header />, initialState);
 
-    expect(nav).toHaveClass("navbar_open")
-  })
+    const burger = document.querySelector('.burgerBtn');
+    const nav = screen.getByRole('navigation');
+    userEvent.click(burger);
 
-  it("closeMenu works", () => {
-    render(
-      <Provider store={mockStore}>
-        <Router history={history}>
-          <Header/>
-        </Router>
-      </Provider>
-    )
-    const burger = document.querySelector(".burgerBtn")
-    userEvent.click(burger)
-    const closeBtn = document.querySelector(".closeBtn")
-    const nav = screen.getByRole("navigation")
-    userEvent.click(closeBtn)
+    expect(nav).toHaveClass('navbar_open');
+  });
 
-    expect(nav).not.toHaveClass("navbar_open")
-  })
+  it('closeMenu works', () => {
+    renderWithRedux(<Header />, initialState);
 
-  it("navigation works", () => {
-    render(
-      <Provider store={mockStore}>
-        <Router history={history}>
-          <Header/>
-        </Router>
-      </Provider>
-    )
+    const burger = document.querySelector('.burgerBtn');
+    userEvent.click(burger);
+    const closeBtn = document.querySelector('.closeBtn');
+    const nav = screen.getByRole('navigation');
+    userEvent.click(closeBtn);
 
-    userEvent.click(screen.getByText(/карта/i))
-    expect(history.location.pathname).toMatch(ROUTE_NAMES.MAP)
-    userEvent.click(screen.getByText(/профиль/i))
-    expect(history.location.pathname).toMatch(ROUTE_NAMES.PROFILE)
-  })
+    expect(nav).not.toHaveClass('navbar_open');
+  });
 
-  it("logout works", () => {
-    const useDispatchSpy = jest.spyOn(redux, "useDispatch")
-    const mockDispatchFn = jest.fn()
-    useDispatchSpy.mockReturnValue(mockDispatchFn)
+  it('navigation works', () => {
+    const history = createMemoryHistory();
+    const mockStore = configureStore();
+
+    const store = mockStore(initialState);
 
     render(
-      <Provider store={mockStore}>
+      <Provider store={store}>
         <Router history={history}>
-          <Header/>
+          <Header />
         </Router>
-      </Provider>
-    )
+      </Provider>,
+    );
 
-    userEvent.click(screen.getByText(/выйти/i))
-    expect(mockDispatchFn).toHaveBeenCalledWith(logOut())
-    useDispatchSpy.mockClear()
-  })
+    userEvent.click(screen.getByText(/карта/i));
+    expect(history.location.pathname).toMatch(ROUTE_NAMES.MAP);
+    userEvent.click(screen.getByText(/профиль/i));
+    expect(history.location.pathname).toMatch(ROUTE_NAMES.PROFILE);
+  });
 
-  it("Header snapshot", () => {
-    const header = render(
-      <Provider store={mockStore}>
-        <Router history={history}>
-          <Header/>
-        </Router>
-      </Provider>
-    )
+  it('logout works', () => {
+    const logOutSpy = jest.spyOn(authActions, 'logout');
 
-    expect(header).toMatchSnapshot()
-  })
-})
+    renderWithRedux(<Header />, initialState);
+
+    userEvent.click(screen.getByText(/выйти/i));
+    expect(logOutSpy).toHaveBeenCalledWith();
+    logOutSpy.mockClear();
+  });
+
+  it('Header snapshot', () => {
+    const header = renderWithRedux(<Header />, initialState);
+
+    expect(header).toMatchSnapshot();
+  });
+});

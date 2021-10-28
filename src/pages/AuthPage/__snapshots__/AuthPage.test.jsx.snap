@@ -26,8 +26,9 @@ Object {
               class="card"
             >
               <form
-                aria-label="form"
                 class="form"
+                data-testid="registrationForm"
+                novalidate=""
               >
                 <h2
                   class="form__title"
@@ -35,7 +36,7 @@ Object {
                   Регистрация
                 </h2>
                 <div
-                  class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+                  class="MuiFormControl-root MuiTextField-root makeStyles-input-3 MuiFormControl-fullWidth"
                 >
                   <label
                     class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
@@ -56,13 +57,13 @@ Object {
                   </div>
                 </div>
                 <div
-                  class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+                  class="MuiFormControl-root MuiTextField-root makeStyles-input-3 MuiFormControl-fullWidth"
                 >
                   <label
                     class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
                     data-shrink="false"
                   >
-                    Как вас зовут?*
+                    Имя*
                   </label>
                   <div
                     class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-fullWidth MuiInput-fullWidth MuiInputBase-formControl MuiInput-formControl"
@@ -70,14 +71,35 @@ Object {
                     <input
                       aria-invalid="false"
                       class="MuiInputBase-input MuiInput-input"
-                      name="username"
+                      name="name"
                       type="text"
                       value=""
                     />
                   </div>
                 </div>
                 <div
-                  class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+                  class="MuiFormControl-root MuiTextField-root makeStyles-input-3 MuiFormControl-fullWidth"
+                >
+                  <label
+                    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
+                    data-shrink="false"
+                  >
+                    Фамилия*
+                  </label>
+                  <div
+                    class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-fullWidth MuiInput-fullWidth MuiInputBase-formControl MuiInput-formControl"
+                  >
+                    <input
+                      aria-invalid="false"
+                      class="MuiInputBase-input MuiInput-input"
+                      name="surname"
+                      type="text"
+                      value=""
+                    />
+                  </div>
+                </div>
+                <div
+                  class="MuiFormControl-root MuiTextField-root makeStyles-input-3 MuiFormControl-fullWidth"
                 >
                   <label
                     class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
@@ -98,9 +120,9 @@ Object {
                   </div>
                 </div>
                 <button
-                  class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-fullWidth"
+                  class="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-button-4 MuiButton-containedPrimary MuiButton-fullWidth"
                   tabindex="0"
-                  type="button"
+                  type="submit"
                 >
                   <span
                     class="MuiButton-label"
@@ -114,7 +136,7 @@ Object {
                 <p
                   class="form__text"
                 >
-                  Уже зарегестрированны?
+                  Уже зарегистрированны?
                   <a
                     href="/login"
                   >
@@ -150,8 +172,9 @@ Object {
             class="card"
           >
             <form
-              aria-label="form"
               class="form"
+              data-testid="registrationForm"
+              novalidate=""
             >
               <h2
                 class="form__title"
@@ -159,7 +182,7 @@ Object {
                 Регистрация
               </h2>
               <div
-                class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+                class="MuiFormControl-root MuiTextField-root makeStyles-input-3 MuiFormControl-fullWidth"
               >
                 <label
                   class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
@@ -180,13 +203,13 @@ Object {
                 </div>
               </div>
               <div
-                class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+                class="MuiFormControl-root MuiTextField-root makeStyles-input-3 MuiFormControl-fullWidth"
               >
                 <label
                   class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
                   data-shrink="false"
                 >
-                  Как вас зовут?*
+                  Имя*
                 </label>
                 <div
                   class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-fullWidth MuiInput-fullWidth MuiInputBase-formControl MuiInput-formControl"
@@ -194,14 +217,35 @@ Object {
                   <input
                     aria-invalid="false"
                     class="MuiInputBase-input MuiInput-input"
-                    name="username"
+                    name="name"
                     type="text"
                     value=""
                   />
                 </div>
               </div>
               <div
-                class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+                class="MuiFormControl-root MuiTextField-root makeStyles-input-3 MuiFormControl-fullWidth"
+              >
+                <label
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
+                  data-shrink="false"
+                >
+                  Фамилия*
+                </label>
+                <div
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-fullWidth MuiInput-fullWidth MuiInputBase-formControl MuiInput-formControl"
+                >
+                  <input
+                    aria-invalid="false"
+                    class="MuiInputBase-input MuiInput-input"
+                    name="surname"
+                    type="text"
+                    value=""
+                  />
+                </div>
+              </div>
+              <div
+                class="MuiFormControl-root MuiTextField-root makeStyles-input-3 MuiFormControl-fullWidth"
               >
                 <label
                   class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
@@ -222,9 +266,9 @@ Object {
                 </div>
               </div>
               <button
-                class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-fullWidth"
+                class="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-button-4 MuiButton-containedPrimary MuiButton-fullWidth"
                 tabindex="0"
-                type="button"
+                type="submit"
               >
                 <span
                   class="MuiButton-label"
@@ -238,7 +282,7 @@ Object {
               <p
                 class="form__text"
               >
-                Уже зарегестрированны?
+                Уже зарегистрированны?
                 <a
                   href="/login"
                 >

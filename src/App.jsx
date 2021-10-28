@@ -2,10 +2,11 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import MainLayout from './layout';
-import { authActions } from './store/actions/auth';
 import { AUTH_TOKEN } from './constants';
 import { orderActions } from './store/actions/order';
+import { authActions } from './store/actions/auth';
 import { profileActions } from './store/actions/profile';
+import Spinner from './components/Spinner';
 
 class App extends Component {
   componentDidMount() {
@@ -18,14 +19,18 @@ class App extends Component {
   }
 
   render() {
+    const { props } = this;
+
+    if (props.isLoading) {
+      return <Spinner />;
+    }
     return <MainLayout />;
   }
 }
 
 function mapStateToProps(state) {
   return {
-    isAuth: state.auth.isLoggedIn,
-    addressList: state.order.addressList,
+    isLoading: state.profile.isLoading,
   };
 }
 
@@ -38,6 +43,7 @@ function mapDispatchToProps(dispatch) {
 }
 
 App.propTypes = {
+  isLoading: PropTypes.bool.isRequired,
   getAddressList: PropTypes.func.isRequired,
   login: PropTypes.func.isRequired,
   getProfile: PropTypes.func.isRequired,

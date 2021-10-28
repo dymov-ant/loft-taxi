@@ -1,17 +1,33 @@
-// import { render } from '@testing-library/react';
-// import React from 'react';
-// import MapPage from './index';
-//
-// describe('Map Page', () => {
-//   it('MapPage renders', () => {
-//     const { container } = render(<MapPage />);
-//
-//     expect(container.innerHTML).toMatch('mapPage');
-//   });
-//
-//   it('MapPage snapshot', () => {
-//     const mapPage = render(<MapPage />);
-//
-//     expect(mapPage).toMatchSnapshot();
-//   });
-// });
+import React from 'react';
+import MapPage from './index';
+import { renderWithRedux } from '../../utils/renderWithRedux';
+
+jest.mock('../../components/Map', () => () => <div>map</div>);
+
+describe('Map Page', () => {
+  const initialState = {
+    order: {
+      addressList: [],
+      route: [],
+    },
+    profile: {
+      card: {
+        cardName: '',
+        cardNumber: '',
+        expiryDate: '',
+        cvc: '',
+      },
+    },
+  };
+  it('MapPage renders', () => {
+    const { container } = renderWithRedux(<MapPage />, initialState);
+
+    expect(container).toBeInTheDocument();
+  });
+
+  it('MapPage snapshot', () => {
+    const mapPage = renderWithRedux(<MapPage />, initialState);
+
+    expect(mapPage).toMatchSnapshot();
+  });
+});

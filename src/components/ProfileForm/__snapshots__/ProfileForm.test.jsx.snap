@@ -1,0 +1,1031 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProfileForm component ProfileForm snapshot 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="form__wrapper"
+      >
+        <h1
+          class="form__title"
+        >
+          Профиль
+        </h1>
+        <p
+          class="form__text"
+        >
+          Введите платежные данные
+        </p>
+        <form
+          class="form__formWrapper"
+          novalidate=""
+        >
+          <div
+            class="form__form"
+          >
+            <div
+              class="form__row"
+            >
+              <div
+                class="MuiFormControl-root MuiTextField-root makeStyles-input-3 MuiFormControl-fullWidth"
+              >
+                <label
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled"
+                  data-shrink="true"
+                >
+                  Имя владельца
+                </label>
+                <div
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-fullWidth MuiInput-fullWidth MuiInputBase-formControl MuiInput-formControl"
+                >
+                  <input
+                    aria-invalid="false"
+                    class="MuiInputBase-input MuiInput-input"
+                    name="cardName"
+                    style="text-transform: uppercase;"
+                    type="text"
+                    value="Test Name"
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              class="form__row"
+            >
+              <div
+                class="MuiFormControl-root MuiTextField-root makeStyles-input-3 MuiFormControl-fullWidth"
+              >
+                <label
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled"
+                  data-shrink="true"
+                >
+                  Номер карты
+                </label>
+                <div
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-fullWidth MuiInput-fullWidth MuiInputBase-formControl MuiInput-formControl"
+                >
+                  <input
+                    aria-invalid="false"
+                    class="MuiInputBase-input MuiInput-input"
+                    name="cardNumber"
+                    type="text"
+                    value="1231 2312 3123 2131"
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              class="form__row"
+            >
+              <div
+                class="form__col"
+              >
+                <div
+                  class="MuiFormControl-root MuiTextField-root makeStyles-input-3"
+                >
+                  <label
+                    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled"
+                    data-shrink="true"
+                  >
+                    MM/YY
+                  </label>
+                  <div
+                    class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl MuiInputBase-adornedEnd"
+                  >
+                    <input
+                      aria-invalid="false"
+                      class="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedEnd"
+                      name="expiryDate"
+                      type="text"
+                      value="11/22"
+                    />
+                    <div
+                      class="MuiInputAdornment-root MuiInputAdornment-positionEnd"
+                    >
+                      <button
+                        class="MuiButtonBase-root MuiIconButton-root"
+                        tabindex="0"
+                        type="button"
+                      >
+                        <span
+                          class="MuiIconButton-label"
+                        >
+                          <svg
+                            aria-hidden="true"
+                            class="MuiSvgIcon-root"
+                            focusable="false"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z"
+                            />
+                            <path
+                              d="M0 0h24v24H0z"
+                              fill="none"
+                            />
+                          </svg>
+                        </span>
+                        <span
+                          class="MuiTouchRipple-root"
+                        />
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="form__col"
+              >
+                <div
+                  class="MuiFormControl-root MuiTextField-root makeStyles-input-3 MuiFormControl-fullWidth"
+                >
+                  <label
+                    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled"
+                    data-shrink="true"
+                  >
+                    CVC
+                  </label>
+                  <div
+                    class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-fullWidth MuiInput-fullWidth MuiInputBase-formControl MuiInput-formControl"
+                  >
+                    <input
+                      aria-invalid="false"
+                      class="MuiInputBase-input MuiInput-input"
+                      name="cvc"
+                      type="text"
+                      value="123"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="form__cardWrapper"
+          >
+            <div
+              class="card"
+            >
+              <div
+                class="card__top"
+              >
+                <img
+                  alt="лого"
+                  class="card__logo"
+                  src="card-logo.svg"
+                />
+                <p
+                  class="card__date"
+                >
+                  11/22
+                </p>
+              </div>
+              <p
+                class="card__number"
+              >
+                <span>
+                  1231
+                </span>
+                <span>
+                  2312
+                </span>
+                <span>
+                  3123
+                </span>
+                <span>
+                  2131
+                </span>
+              </p>
+              <div
+                class="card__bottom"
+              >
+                <img
+                  alt="чип"
+                  class="card__schema"
+                  src="card-schema.svg"
+                />
+                <img
+                  alt="mastercard"
+                  class="card__mastercard"
+                  src="master-card.svg"
+                />
+              </div>
+            </div>
+          </div>
+        </form>
+        <button
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary"
+          data-testid="button"
+          tabindex="0"
+          type="submit"
+        >
+          <span
+            class="MuiButton-label"
+          >
+            Сохранить
+          </span>
+          <span
+            class="MuiTouchRipple-root"
+          />
+        </button>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="form__wrapper"
+    >
+      <h1
+        class="form__title"
+      >
+        Профиль
+      </h1>
+      <p
+        class="form__text"
+      >
+        Введите платежные данные
+      </p>
+      <form
+        class="form__formWrapper"
+        novalidate=""
+      >
+        <div
+          class="form__form"
+        >
+          <div
+            class="form__row"
+          >
+            <div
+              class="MuiFormControl-root MuiTextField-root makeStyles-input-3 MuiFormControl-fullWidth"
+            >
+              <label
+                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled"
+                data-shrink="true"
+              >
+                Имя владельца
+              </label>
+              <div
+                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-fullWidth MuiInput-fullWidth MuiInputBase-formControl MuiInput-formControl"
+              >
+                <input
+                  aria-invalid="false"
+                  class="MuiInputBase-input MuiInput-input"
+                  name="cardName"
+                  style="text-transform: uppercase;"
+                  type="text"
+                  value="Test Name"
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            class="form__row"
+          >
+            <div
+              class="MuiFormControl-root MuiTextField-root makeStyles-input-3 MuiFormControl-fullWidth"
+            >
+              <label
+                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled"
+                data-shrink="true"
+              >
+                Номер карты
+              </label>
+              <div
+                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-fullWidth MuiInput-fullWidth MuiInputBase-formControl MuiInput-formControl"
+              >
+                <input
+                  aria-invalid="false"
+                  class="MuiInputBase-input MuiInput-input"
+                  name="cardNumber"
+                  type="text"
+                  value="1231 2312 3123 2131"
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            class="form__row"
+          >
+            <div
+              class="form__col"
+            >
+              <div
+                class="MuiFormControl-root MuiTextField-root makeStyles-input-3"
+              >
+                <label
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled"
+                  data-shrink="true"
+                >
+                  MM/YY
+                </label>
+                <div
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl MuiInputBase-adornedEnd"
+                >
+                  <input
+                    aria-invalid="false"
+                    class="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedEnd"
+                    name="expiryDate"
+                    type="text"
+                    value="11/22"
+                  />
+                  <div
+                    class="MuiInputAdornment-root MuiInputAdornment-positionEnd"
+                  >
+                    <button
+                      class="MuiButtonBase-root MuiIconButton-root"
+                      tabindex="0"
+                      type="button"
+                    >
+                      <span
+                        class="MuiIconButton-label"
+                      >
+                        <svg
+                          aria-hidden="true"
+                          class="MuiSvgIcon-root"
+                          focusable="false"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z"
+                          />
+                          <path
+                            d="M0 0h24v24H0z"
+                            fill="none"
+                          />
+                        </svg>
+                      </span>
+                      <span
+                        class="MuiTouchRipple-root"
+                      />
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="form__col"
+            >
+              <div
+                class="MuiFormControl-root MuiTextField-root makeStyles-input-3 MuiFormControl-fullWidth"
+              >
+                <label
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled"
+                  data-shrink="true"
+                >
+                  CVC
+                </label>
+                <div
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-fullWidth MuiInput-fullWidth MuiInputBase-formControl MuiInput-formControl"
+                >
+                  <input
+                    aria-invalid="false"
+                    class="MuiInputBase-input MuiInput-input"
+                    name="cvc"
+                    type="text"
+                    value="123"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="form__cardWrapper"
+        >
+          <div
+            class="card"
+          >
+            <div
+              class="card__top"
+            >
+              <img
+                alt="лого"
+                class="card__logo"
+                src="card-logo.svg"
+              />
+              <p
+                class="card__date"
+              >
+                11/22
+              </p>
+            </div>
+            <p
+              class="card__number"
+            >
+              <span>
+                1231
+              </span>
+              <span>
+                2312
+              </span>
+              <span>
+                3123
+              </span>
+              <span>
+                2131
+              </span>
+            </p>
+            <div
+              class="card__bottom"
+            >
+              <img
+                alt="чип"
+                class="card__schema"
+                src="card-schema.svg"
+              />
+              <img
+                alt="mastercard"
+                class="card__mastercard"
+                src="master-card.svg"
+              />
+            </div>
+          </div>
+        </div>
+      </form>
+      <button
+        class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary"
+        data-testid="button"
+        tabindex="0"
+        type="submit"
+      >
+        <span
+          class="MuiButton-label"
+        >
+          Сохранить
+        </span>
+        <span
+          class="MuiTouchRipple-root"
+        />
+      </button>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`ProfileForm component ProfileForm with card snapshot 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="form__wrapper"
+      >
+        <h1
+          class="form__title"
+        >
+          Профиль
+        </h1>
+        <p
+          class="form__text"
+        >
+          Введите платежные данные
+        </p>
+        <form
+          class="form__formWrapper"
+          novalidate=""
+        >
+          <div
+            class="form__form"
+          >
+            <div
+              class="form__row"
+            >
+              <div
+                class="MuiFormControl-root MuiTextField-root makeStyles-input-4 MuiFormControl-fullWidth"
+              >
+                <label
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled"
+                  data-shrink="true"
+                >
+                  Имя владельца
+                </label>
+                <div
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-fullWidth MuiInput-fullWidth MuiInputBase-formControl MuiInput-formControl"
+                >
+                  <input
+                    aria-invalid="false"
+                    class="MuiInputBase-input MuiInput-input"
+                    name="cardName"
+                    style="text-transform: uppercase;"
+                    type="text"
+                    value="Test Name"
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              class="form__row"
+            >
+              <div
+                class="MuiFormControl-root MuiTextField-root makeStyles-input-4 MuiFormControl-fullWidth"
+              >
+                <label
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled"
+                  data-shrink="true"
+                >
+                  Номер карты
+                </label>
+                <div
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-fullWidth MuiInput-fullWidth MuiInputBase-formControl MuiInput-formControl"
+                >
+                  <input
+                    aria-invalid="false"
+                    class="MuiInputBase-input MuiInput-input"
+                    name="cardNumber"
+                    type="text"
+                    value="1231 2312 3123 2131"
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              class="form__row"
+            >
+              <div
+                class="form__col"
+              >
+                <div
+                  class="MuiFormControl-root MuiTextField-root makeStyles-input-4"
+                >
+                  <label
+                    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled"
+                    data-shrink="true"
+                  >
+                    MM/YY
+                  </label>
+                  <div
+                    class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl MuiInputBase-adornedEnd"
+                  >
+                    <input
+                      aria-invalid="false"
+                      class="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedEnd"
+                      name="expiryDate"
+                      type="text"
+                      value="11/22"
+                    />
+                    <div
+                      class="MuiInputAdornment-root MuiInputAdornment-positionEnd"
+                    >
+                      <button
+                        class="MuiButtonBase-root MuiIconButton-root"
+                        tabindex="0"
+                        type="button"
+                      >
+                        <span
+                          class="MuiIconButton-label"
+                        >
+                          <svg
+                            aria-hidden="true"
+                            class="MuiSvgIcon-root"
+                            focusable="false"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z"
+                            />
+                            <path
+                              d="M0 0h24v24H0z"
+                              fill="none"
+                            />
+                          </svg>
+                        </span>
+                        <span
+                          class="MuiTouchRipple-root"
+                        />
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="form__col"
+              >
+                <div
+                  class="MuiFormControl-root MuiTextField-root makeStyles-input-4 MuiFormControl-fullWidth"
+                >
+                  <label
+                    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled"
+                    data-shrink="true"
+                  >
+                    CVC
+                  </label>
+                  <div
+                    class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-fullWidth MuiInput-fullWidth MuiInputBase-formControl MuiInput-formControl"
+                  >
+                    <input
+                      aria-invalid="false"
+                      class="MuiInputBase-input MuiInput-input"
+                      name="cvc"
+                      type="text"
+                      value="123"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="form__cardWrapper"
+          >
+            <div
+              class="card"
+            >
+              <div
+                class="card__top"
+              >
+                <img
+                  alt="лого"
+                  class="card__logo"
+                  src="card-logo.svg"
+                />
+                <p
+                  class="card__date"
+                >
+                  11/22
+                </p>
+              </div>
+              <p
+                class="card__number"
+              >
+                <span>
+                  1231
+                </span>
+                <span>
+                  2312
+                </span>
+                <span>
+                  3123
+                </span>
+                <span>
+                  2131
+                </span>
+              </p>
+              <div
+                class="card__bottom"
+              >
+                <img
+                  alt="чип"
+                  class="card__schema"
+                  src="card-schema.svg"
+                />
+                <img
+                  alt="mastercard"
+                  class="card__mastercard"
+                  src="master-card.svg"
+                />
+              </div>
+            </div>
+          </div>
+        </form>
+        <button
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary"
+          data-testid="button"
+          tabindex="0"
+          type="submit"
+        >
+          <span
+            class="MuiButton-label"
+          >
+            Сохранить
+          </span>
+          <span
+            class="MuiTouchRipple-root"
+          />
+        </button>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="form__wrapper"
+    >
+      <h1
+        class="form__title"
+      >
+        Профиль
+      </h1>
+      <p
+        class="form__text"
+      >
+        Введите платежные данные
+      </p>
+      <form
+        class="form__formWrapper"
+        novalidate=""
+      >
+        <div
+          class="form__form"
+        >
+          <div
+            class="form__row"
+          >
+            <div
+              class="MuiFormControl-root MuiTextField-root makeStyles-input-4 MuiFormControl-fullWidth"
+            >
+              <label
+                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled"
+                data-shrink="true"
+              >
+                Имя владельца
+              </label>
+              <div
+                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-fullWidth MuiInput-fullWidth MuiInputBase-formControl MuiInput-formControl"
+              >
+                <input
+                  aria-invalid="false"
+                  class="MuiInputBase-input MuiInput-input"
+                  name="cardName"
+                  style="text-transform: uppercase;"
+                  type="text"
+                  value="Test Name"
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            class="form__row"
+          >
+            <div
+              class="MuiFormControl-root MuiTextField-root makeStyles-input-4 MuiFormControl-fullWidth"
+            >
+              <label
+                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled"
+                data-shrink="true"
+              >
+                Номер карты
+              </label>
+              <div
+                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-fullWidth MuiInput-fullWidth MuiInputBase-formControl MuiInput-formControl"
+              >
+                <input
+                  aria-invalid="false"
+                  class="MuiInputBase-input MuiInput-input"
+                  name="cardNumber"
+                  type="text"
+                  value="1231 2312 3123 2131"
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            class="form__row"
+          >
+            <div
+              class="form__col"
+            >
+              <div
+                class="MuiFormControl-root MuiTextField-root makeStyles-input-4"
+              >
+                <label
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled"
+                  data-shrink="true"
+                >
+                  MM/YY
+                </label>
+                <div
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl MuiInputBase-adornedEnd"
+                >
+                  <input
+                    aria-invalid="false"
+                    class="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedEnd"
+                    name="expiryDate"
+                    type="text"
+                    value="11/22"
+                  />
+                  <div
+                    class="MuiInputAdornment-root MuiInputAdornment-positionEnd"
+                  >
+                    <button
+                      class="MuiButtonBase-root MuiIconButton-root"
+                      tabindex="0"
+                      type="button"
+                    >
+                      <span
+                        class="MuiIconButton-label"
+                      >
+                        <svg
+                          aria-hidden="true"
+                          class="MuiSvgIcon-root"
+                          focusable="false"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z"
+                          />
+                          <path
+                            d="M0 0h24v24H0z"
+                            fill="none"
+                          />
+                        </svg>
+                      </span>
+                      <span
+                        class="MuiTouchRipple-root"
+                      />
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="form__col"
+            >
+              <div
+                class="MuiFormControl-root MuiTextField-root makeStyles-input-4 MuiFormControl-fullWidth"
+              >
+                <label
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled"
+                  data-shrink="true"
+                >
+                  CVC
+                </label>
+                <div
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-fullWidth MuiInput-fullWidth MuiInputBase-formControl MuiInput-formControl"
+                >
+                  <input
+                    aria-invalid="false"
+                    class="MuiInputBase-input MuiInput-input"
+                    name="cvc"
+                    type="text"
+                    value="123"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="form__cardWrapper"
+        >
+          <div
+            class="card"
+          >
+            <div
+              class="card__top"
+            >
+              <img
+                alt="лого"
+                class="card__logo"
+                src="card-logo.svg"
+              />
+              <p
+                class="card__date"
+              >
+                11/22
+              </p>
+            </div>
+            <p
+              class="card__number"
+            >
+              <span>
+                1231
+              </span>
+              <span>
+                2312
+              </span>
+              <span>
+                3123
+              </span>
+              <span>
+                2131
+              </span>
+            </p>
+            <div
+              class="card__bottom"
+            >
+              <img
+                alt="чип"
+                class="card__schema"
+                src="card-schema.svg"
+              />
+              <img
+                alt="mastercard"
+                class="card__mastercard"
+                src="master-card.svg"
+              />
+            </div>
+          </div>
+        </div>
+      </form>
+      <button
+        class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary"
+        data-testid="button"
+        tabindex="0"
+        type="submit"
+      >
+        <span
+          class="MuiButton-label"
+        >
+          Сохранить
+        </span>
+        <span
+          class="MuiTouchRipple-root"
+        />
+      </button>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

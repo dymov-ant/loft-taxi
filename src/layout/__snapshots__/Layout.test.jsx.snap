@@ -1,18 +1,24 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`App component App snapshot 1`] = `
+exports[`MainLayout component MainLayout snapshot 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
       <div>
-        Spinner
+        Header
+      </div>
+      <div>
+        appRouter
       </div>
     </div>
   </body>,
   "container": <div>
     <div>
-      Spinner
+      Header
+    </div>
+    <div>
+      appRouter
     </div>
   </div>,
   "debug": [Function],

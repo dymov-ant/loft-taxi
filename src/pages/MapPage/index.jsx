@@ -2,7 +2,6 @@ import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
-
 import { Button, Typography } from '@material-ui/core';
 import Card from '../../components/Card';
 import Map from '../../components/Map';

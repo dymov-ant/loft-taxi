@@ -159,7 +159,13 @@ const ProfileForm = () => {
           {isLoading ? (
             <Spinner />
           ) : (
-            <Button variant="contained" color="primary" type="submit" onClick={formik.handleSubmit}>
+            <Button
+              variant="contained"
+              color="primary"
+              type="submit"
+              onClick={formik.handleSubmit}
+              data-testid="button"
+            >
               Сохранить
             </Button>
           )}

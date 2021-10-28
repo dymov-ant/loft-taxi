@@ -1,18 +1,108 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`App component App snapshot 1`] = `
+exports[`SavedCard component SavedCard snapshot 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
-      <div>
-        Spinner
+      <div
+        class="card"
+      >
+        <div
+          class="card__top"
+        >
+          <img
+            alt="лого"
+            class="card__logo"
+            src="card-logo.svg"
+          />
+          <p
+            class="card__date"
+          >
+            10/25
+          </p>
+        </div>
+        <p
+          class="card__number"
+        >
+          <span>
+            1111
+          </span>
+          <span>
+            2222
+          </span>
+          <span>
+            3333
+          </span>
+          <span>
+            4444
+          </span>
+        </p>
+        <div
+          class="card__bottom"
+        >
+          <img
+            alt="чип"
+            class="card__schema"
+            src="card-schema.svg"
+          />
+          <img
+            alt="mastercard"
+            class="card__mastercard"
+            src="master-card.svg"
+          />
+        </div>
       </div>
     </div>
   </body>,
   "container": <div>
-    <div>
-      Spinner
+    <div
+      class="card"
+    >
+      <div
+        class="card__top"
+      >
+        <img
+          alt="лого"
+          class="card__logo"
+          src="card-logo.svg"
+        />
+        <p
+          class="card__date"
+        >
+          10/25
+        </p>
+      </div>
+      <p
+        class="card__number"
+      >
+        <span>
+          1111
+        </span>
+        <span>
+          2222
+        </span>
+        <span>
+          3333
+        </span>
+        <span>
+          4444
+        </span>
+      </p>
+      <div
+        class="card__bottom"
+      >
+        <img
+          alt="чип"
+          class="card__schema"
+          src="card-schema.svg"
+        />
+        <img
+          alt="mastercard"
+          class="card__mastercard"
+          src="master-card.svg"
+        />
+      </div>
     </div>
   </div>,
   "debug": [Function],

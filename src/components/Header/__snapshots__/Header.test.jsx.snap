@@ -47,8 +47,6 @@ Object {
               class="item"
             >
               <a
-                aria-current="page"
-                class="active"
                 href="/profile"
               >
                 <img
@@ -123,8 +121,6 @@ Object {
             class="item"
           >
             <a
-              aria-current="page"
-              class="active"
               href="/profile"
             >
               <img

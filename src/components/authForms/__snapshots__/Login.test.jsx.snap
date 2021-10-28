@@ -6,8 +6,9 @@ Object {
   "baseElement": <body>
     <div>
       <form
-        aria-label="form"
         class="form"
+        data-testid="loginForm"
+        novalidate=""
       >
         <h2
           class="form__title"
@@ -29,6 +30,7 @@ Object {
             <input
               aria-invalid="false"
               class="MuiInputBase-input MuiInput-input"
+              name="email"
               type="email"
               value=""
             />
@@ -49,6 +51,7 @@ Object {
             <input
               aria-invalid="false"
               class="MuiInputBase-input MuiInput-input"
+              name="password"
               type="password"
               value=""
             />
@@ -56,14 +59,14 @@ Object {
         </div>
         <a
           class="form__passwordRefresh"
-          href="/"
+          href="/login"
         >
           Забыли пароль?
         </a>
         <button
           class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-fullWidth"
           tabindex="0"
-          type="button"
+          type="submit"
         >
           <span
             class="MuiButton-label"
@@ -89,8 +92,9 @@ Object {
   </body>,
   "container": <div>
     <form
-      aria-label="form"
       class="form"
+      data-testid="loginForm"
+      novalidate=""
     >
       <h2
         class="form__title"
@@ -112,6 +116,7 @@ Object {
           <input
             aria-invalid="false"
             class="MuiInputBase-input MuiInput-input"
+            name="email"
             type="email"
             value=""
           />
@@ -132,6 +137,7 @@ Object {
           <input
             aria-invalid="false"
             class="MuiInputBase-input MuiInput-input"
+            name="password"
             type="password"
             value=""
           />
@@ -139,14 +145,14 @@ Object {
       </div>
       <a
         class="form__passwordRefresh"
-        href="/"
+        href="/login"
       >
         Забыли пароль?
       </a>
       <button
         class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-fullWidth"
         tabindex="0"
-        type="button"
+        type="submit"
       >
         <span
           class="MuiButton-label"

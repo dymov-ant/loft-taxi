@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import logoVertical from '../../assets/img/logo-v.svg';
+import { ROUTE_NAMES } from '../../router';
 import LoginForm from '../../components/authForms/Login';
 import RegisterForm from '../../components/authForms/Register';
 import Card from '../../components/Card';
@@ -17,7 +18,7 @@ class AuthPage extends PureComponent {
         </div>
         <div className={styles.authpage__right}>
           <div className={styles.authpage__card}>
-            <Card>{location.pathname === '/login' ? <LoginForm /> : <RegisterForm />}</Card>
+            <Card>{location.pathname === ROUTE_NAMES.LOGIN ? <LoginForm /> : <RegisterForm />}</Card>
           </div>
         </div>
       </div>
