@@ -16,7 +16,8 @@ Object {
           Регистрация
         </h2>
         <div
-          class="MuiFormControl-root MuiTextField-root makeStyles-input-3 MuiFormControl-fullWidth"
+          class="MuiFormControl-root MuiTextField-root makeStyles-input-9 MuiFormControl-fullWidth"
+          data-testid="email"
         >
           <label
             class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
@@ -37,7 +38,8 @@ Object {
           </div>
         </div>
         <div
-          class="MuiFormControl-root MuiTextField-root makeStyles-input-3 MuiFormControl-fullWidth"
+          class="MuiFormControl-root MuiTextField-root makeStyles-input-9 MuiFormControl-fullWidth"
+          data-testid="name"
         >
           <label
             class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
@@ -58,7 +60,8 @@ Object {
           </div>
         </div>
         <div
-          class="MuiFormControl-root MuiTextField-root makeStyles-input-3 MuiFormControl-fullWidth"
+          class="MuiFormControl-root MuiTextField-root makeStyles-input-9 MuiFormControl-fullWidth"
+          data-testid="surname"
         >
           <label
             class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
@@ -79,7 +82,8 @@ Object {
           </div>
         </div>
         <div
-          class="MuiFormControl-root MuiTextField-root makeStyles-input-3 MuiFormControl-fullWidth"
+          class="MuiFormControl-root MuiTextField-root makeStyles-input-9 MuiFormControl-fullWidth"
+          data-testid="password"
         >
           <label
             class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
@@ -100,7 +104,7 @@ Object {
           </div>
         </div>
         <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-button-4 MuiButton-containedPrimary MuiButton-fullWidth"
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-button-10 MuiButton-containedPrimary MuiButton-fullWidth"
           tabindex="0"
           type="submit"
         >
@@ -138,7 +142,8 @@ Object {
         Регистрация
       </h2>
       <div
-        class="MuiFormControl-root MuiTextField-root makeStyles-input-3 MuiFormControl-fullWidth"
+        class="MuiFormControl-root MuiTextField-root makeStyles-input-9 MuiFormControl-fullWidth"
+        data-testid="email"
       >
         <label
           class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
@@ -159,7 +164,8 @@ Object {
         </div>
       </div>
       <div
-        class="MuiFormControl-root MuiTextField-root makeStyles-input-3 MuiFormControl-fullWidth"
+        class="MuiFormControl-root MuiTextField-root makeStyles-input-9 MuiFormControl-fullWidth"
+        data-testid="name"
       >
         <label
           class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
@@ -180,7 +186,8 @@ Object {
         </div>
       </div>
       <div
-        class="MuiFormControl-root MuiTextField-root makeStyles-input-3 MuiFormControl-fullWidth"
+        class="MuiFormControl-root MuiTextField-root makeStyles-input-9 MuiFormControl-fullWidth"
+        data-testid="surname"
       >
         <label
           class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
@@ -201,7 +208,8 @@ Object {
         </div>
       </div>
       <div
-        class="MuiFormControl-root MuiTextField-root makeStyles-input-3 MuiFormControl-fullWidth"
+        class="MuiFormControl-root MuiTextField-root makeStyles-input-9 MuiFormControl-fullWidth"
+        data-testid="password"
       >
         <label
           class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
@@ -222,7 +230,7 @@ Object {
         </div>
       </div>
       <button
-        class="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-button-4 MuiButton-containedPrimary MuiButton-fullWidth"
+        class="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-button-10 MuiButton-containedPrimary MuiButton-fullWidth"
         tabindex="0"
         type="submit"
       >

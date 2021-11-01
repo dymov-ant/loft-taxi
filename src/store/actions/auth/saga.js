@@ -6,7 +6,7 @@ import { AUTH_TOKEN } from '../../../constants';
 import { profileActions } from '../profile';
 import { orderActions } from '../order';
 
-function* loginWorker(action) {
+export function* loginWorker(action) {
   try {
     const { payload } = action;
     yield put(authActions.setIsLoading(true));
@@ -22,12 +22,13 @@ function* loginWorker(action) {
     }
   } catch (e) {
     console.log('Ошибка при запросе:', e);
+    yield put(authActions.setError('Ошибка авторизации'));
   } finally {
     yield put(authActions.setIsLoading(false));
   }
 }
 
-function* registrationWorker(action) {
+export function* registrationWorker(action) {
   try {
     const { payload } = action;
     yield put(authActions.setIsLoading(true));
@@ -42,6 +43,7 @@ function* registrationWorker(action) {
     }
   } catch (e) {
     console.log('Ошибка при запросе:', e);
+    yield put(authActions.setError('Ошибка регистрации'));
   } finally {
     yield put(authActions.setIsLoading(false));
   }

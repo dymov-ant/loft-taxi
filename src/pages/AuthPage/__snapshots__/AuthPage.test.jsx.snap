@@ -37,6 +37,7 @@ Object {
                 </h2>
                 <div
                   class="MuiFormControl-root MuiTextField-root makeStyles-input-3 MuiFormControl-fullWidth"
+                  data-testid="email"
                 >
                   <label
                     class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
@@ -58,6 +59,7 @@ Object {
                 </div>
                 <div
                   class="MuiFormControl-root MuiTextField-root makeStyles-input-3 MuiFormControl-fullWidth"
+                  data-testid="name"
                 >
                   <label
                     class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
@@ -79,6 +81,7 @@ Object {
                 </div>
                 <div
                   class="MuiFormControl-root MuiTextField-root makeStyles-input-3 MuiFormControl-fullWidth"
+                  data-testid="surname"
                 >
                   <label
                     class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
@@ -100,6 +103,7 @@ Object {
                 </div>
                 <div
                   class="MuiFormControl-root MuiTextField-root makeStyles-input-3 MuiFormControl-fullWidth"
+                  data-testid="password"
                 >
                   <label
                     class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
@@ -183,6 +187,7 @@ Object {
               </h2>
               <div
                 class="MuiFormControl-root MuiTextField-root makeStyles-input-3 MuiFormControl-fullWidth"
+                data-testid="email"
               >
                 <label
                   class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
@@ -204,6 +209,7 @@ Object {
               </div>
               <div
                 class="MuiFormControl-root MuiTextField-root makeStyles-input-3 MuiFormControl-fullWidth"
+                data-testid="name"
               >
                 <label
                   class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
@@ -225,6 +231,7 @@ Object {
               </div>
               <div
                 class="MuiFormControl-root MuiTextField-root makeStyles-input-3 MuiFormControl-fullWidth"
+                data-testid="surname"
               >
                 <label
                   class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
@@ -246,6 +253,7 @@ Object {
               </div>
               <div
                 class="MuiFormControl-root MuiTextField-root makeStyles-input-3 MuiFormControl-fullWidth"
+                data-testid="password"
               >
                 <label
                   class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"

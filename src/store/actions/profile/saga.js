@@ -3,7 +3,7 @@ import { getProfile, setProfile } from '../../../api/profile';
 import { profileActions } from './index';
 import { GET_PROFILE, SET_PROFILE } from '../../reducers/profile/types';
 
-function* getProfileWorker() {
+export function* getProfileWorker() {
   try {
     yield put(profileActions.fetchingProfile());
     const response = yield call(getProfile);
@@ -19,7 +19,7 @@ function* getProfileWorker() {
   }
 }
 
-function* setProfileWorker(action) {
+export function* setProfileWorker(action) {
   try {
     yield put(profileActions.fetchingProfile());
     const { payload } = action;

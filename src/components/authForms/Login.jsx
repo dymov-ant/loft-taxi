@@ -40,6 +40,7 @@ const LoginForm = () => {
         onChange={formik.handleChange}
         error={formik.touched.email && Boolean(formik.errors.email)}
         helperText={formik.touched.email && formik.errors.email}
+        data-testid="email"
       />
       <TextField
         label="Пароль"
@@ -51,6 +52,7 @@ const LoginForm = () => {
         onChange={formik.handleChange}
         error={formik.touched.password && Boolean(formik.errors.password)}
         helperText={formik.touched.password && formik.errors.password}
+        data-testid="password"
       />
       <Link to={ROUTE_NAMES.LOGIN} className={styles.form__passwordRefresh}>
         Забыли пароль?

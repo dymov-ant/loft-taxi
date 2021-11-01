@@ -3,7 +3,7 @@ import { orderActions } from './index';
 import { getAddressList, getRoute } from '../../../api/order';
 import { GET_ADDRESS_LIST, GET_ROUTE } from '../../reducers/order/types';
 
-function* getAddressListWorker() {
+export function* getAddressListWorker() {
   try {
     yield put(orderActions.fetchingAddressList());
     const response = yield call(getAddressList);
@@ -19,7 +19,7 @@ function* getAddressListWorker() {
   }
 }
 
-function* getRouteWorker(action) {
+export function* getRouteWorker(action) {
   try {
     yield put(orderActions.fetchingRoute());
     const { payload } = action;
