@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
-import mapbox from 'mapbox-gl';
 import { useSelector } from 'react-redux';
+// eslint-disable-next-line import/no-unresolved,import/no-webpack-loader-syntax
+import mapbox from '!mapbox-gl';
 import style from './map.module.scss';
 
 const Map = () => {
