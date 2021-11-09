@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/loft-taxi/static/css/main.ae853ada.chunk.css",
+    "main.js": "/loft-taxi/static/js/main.af5bcbfd.chunk.js",
+    "main.js.map": "/loft-taxi/static/js/main.af5bcbfd.chunk.js.map",
+    "runtime-main.js": "/loft-taxi/static/js/runtime-main.26cf4315.js",
+    "runtime-main.js.map": "/loft-taxi/static/js/runtime-main.26cf4315.js.map",
+    "static/js/2.8ce7405d.chunk.js": "/loft-taxi/static/js/2.8ce7405d.chunk.js",
+    "static/js/2.8ce7405d.chunk.js.map": "/loft-taxi/static/js/2.8ce7405d.chunk.js.map",
+    "index.html": "/loft-taxi/index.html",
+    "static/css/main.ae853ada.chunk.css.map": "/loft-taxi/static/css/main.ae853ada.chunk.css.map",
+    "static/js/2.8ce7405d.chunk.js.LICENSE.txt": "/loft-taxi/static/js/2.8ce7405d.chunk.js.LICENSE.txt",
+    "static/media/burger.4e418569.svg": "/loft-taxi/static/media/burger.4e418569.svg",
+    "static/media/card-logo.d58ee03c.svg": "/loft-taxi/static/media/card-logo.d58ee03c.svg",
+    "static/media/card-schema.fe1ffd96.svg": "/loft-taxi/static/media/card-schema.fe1ffd96.svg",
+    "static/media/close.ac8703de.svg": "/loft-taxi/static/media/close.ac8703de.svg",
+    "static/media/logo-v.cb810b4c.svg": "/loft-taxi/static/media/logo-v.cb810b4c.svg",
+    "static/media/logo.ade8b026.svg": "/loft-taxi/static/media/logo.ade8b026.svg",
+    "static/media/logout.eaac3dfc.svg": "/loft-taxi/static/media/logout.eaac3dfc.svg",
+    "static/media/profilePage.module.scss": "/loft-taxi/static/media/map-bg.6f03adef.png",
+    "static/media/master-card.3fd2fcd4.svg": "/loft-taxi/static/media/master-card.3fd2fcd4.svg",
+    "static/media/pin.17312e38.svg": "/loft-taxi/static/media/pin.17312e38.svg",
+    "static/media/profile.b008e514.svg": "/loft-taxi/static/media/profile.b008e514.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.26cf4315.js",
+    "static/js/2.8ce7405d.chunk.js",
+    "static/css/main.ae853ada.chunk.css",
+    "static/js/main.af5bcbfd.chunk.js"
+  ]
+}
